@@ -1,10 +1,10 @@
-# [Language Choice](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Language Choice.xctemplate)
+# [Language Choice](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate)
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.languageChoice ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Language Choice.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.languageChoice ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
 
 ---
 

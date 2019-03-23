@@ -1,14 +1,14 @@
-# [App Base](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/App Base.xctemplate)
+# [App Base](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate)
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.applicationBase ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/App Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.applicationBase ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.bundleBase ( [Bundle Base](Bundle Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Bundle Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Bundle Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.bundleBase ( [Bundle Base](Bundle Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate/TemplateInfo.plist) )
 
 ---
 

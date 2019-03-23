@@ -1,10 +1,10 @@
-# [Base_ProjectSettings](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_ProjectSettings.xctemplate)
+# [Base_ProjectSettings](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate)
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_ProjectSettings ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_ProjectSettings.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_ProjectSettings ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate/TemplateInfo.plist) )
 
 ---
 

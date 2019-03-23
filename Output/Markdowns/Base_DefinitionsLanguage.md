@@ -1,10 +1,10 @@
-# [Base_DefinitionsLanguage](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_DefinitionsLanguage.xctemplate)
+# [Base_DefinitionsLanguage](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate)
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_DefinitionsLanguage ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_DefinitionsLanguage.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_DefinitionsLanguage ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate/TemplateInfo.plist) )
 
 ---
 

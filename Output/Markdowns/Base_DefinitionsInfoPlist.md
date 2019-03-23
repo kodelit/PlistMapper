@@ -1,10 +1,10 @@
-# [Base_DefinitionsInfoPlist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_DefinitionsInfoPlist.xctemplate)
+# [Base_DefinitionsInfoPlist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsInfoPlist.xctemplate)
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_DefinitionsInfoPlist ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project Templates/Base/Base_DefinitionsInfoPlist.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_DefinitionsInfoPlist ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsInfoPlist.xctemplate/TemplateInfo.plist) )
 
 ---
 

@@ -11,7 +11,7 @@ CommandLine tool to map plist files to other formats allow better analysis and i
 		- [x] link to template directory
 		- [x] links to descriptions, directories and plists of all ancestors
 
-		> Example: [Single View App.md](Output/Markdowns/Single View App.md), [Cocoa Touch App Base.md](Output/Markdowns/Cocoa Touch App Base.md)
+		> Example: [Single View App.md](Output/Markdowns/Single%20View%20App.md), [Cocoa Touch App Base.md](Output/Markdowns/Cocoa%20Touch%20App%20Base.md)
 		
 - [ ] mindmap (freemind format) - visualize inheritance of plists:
 	- [ ] xcode templates inheritance maps

@@ -103,6 +103,10 @@ extension MarkdownGenerator {
         return self.fileContent(for: info, availableAncestorsById: nil)
     }
 
+    private func escaped(path:String) -> String {
+        return path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed) ?? path
+    }
+
     func fileContent(for info:PlistDataType, availableAncestorsById:[String: UniquePlistDataType]?) -> String {
         let name = info.title
         let path = info.path
@@ -110,6 +114,8 @@ extension MarkdownGenerator {
 
         let fileName = info.sourceFileName() ?? "Plist Content"
         let fileDir = (path as NSString).deletingLastPathComponent as String
+        let escapedFileDir = self.escaped(path: fileDir)
+        let excapedPath = self.escaped(path: path)
 
         let isPathSymbolic = fileDir.starts(with: "~")
         let hasPlistIdentifier = info is UniquePlistDataType
@@ -117,15 +123,15 @@ extension MarkdownGenerator {
         var content:String
         if isPathSymbolic {
             content = """
-            # \(name)\n\n`\(fileDir)`
+            # \(name)\n\n`\(escapedFileDir)`
             > Markdown does not support symbolic links so to open the directory you need to copy its path to finder manualy
 
-            ## \(fileName)\n\n`\(path)`
+            ## \(fileName)\n\n`\(excapedPath)`
             """
         }else{
-            content = "# [\(name)](\(fileDir))"
+            content = "# [\(name)](\(escapedFileDir))"
             if !hasPlistIdentifier {
-                content += "\n\n## [\(fileName)](\(path))"
+                content += "\n\n## [\(fileName)](\(excapedPath))"
             }else{
                 content += "\n\n## \(fileName)"
             }
@@ -140,7 +146,7 @@ extension MarkdownGenerator {
                 content.append("\n\n### \(key)\n\n- \(id)")
 
                 if !isPathSymbolic {
-                    content.append(" ( [plist](\(path)) )")
+                    content.append(" ( [plist](\(excapedPath)) )")
                 }
             }
 
@@ -155,8 +161,11 @@ extension MarkdownGenerator {
                 for identifier in ancestors {
                     var valueRow = "\n\n- \(identifier)"
                     if let ancestorInfo = availableAncestorsById?[identifier],
-                        let markdownFileName = ancestorInfo.outputFileName() {
-                        valueRow += " ( [\(ancestorInfo.title)](\(markdownFileName).\(Markdown.fileExtension)), [directory](\(ancestorInfo.sourceDir())), [plist](\(ancestorInfo.path)) )"
+                        let markdownFileName = ancestorInfo.outputFileName()
+                    {
+                        let escapedFileDir = self.escaped(path: ancestorInfo.sourceDir())
+                        let excapedPath = self.escaped(path: ancestorInfo.path)
+                        valueRow += " ( [\(ancestorInfo.title)](\(markdownFileName).\(Markdown.fileExtension)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
                     }
                     content.append(valueRow)
                 }
