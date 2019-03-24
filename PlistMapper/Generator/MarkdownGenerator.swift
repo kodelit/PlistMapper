@@ -205,7 +205,7 @@ extension MarkdownGenerator {
                         let escapedDescriptionFileName = self.escaped(path: "\(markdownFileName).\(Markdown.fileExtension)")
                         let escapedFileDir = self.escaped(path: ancestorInfo.sourceDir())
                         let excapedPath = self.escaped(path: ancestorInfo.path)
-                        valueRow += " ( [\(ancestorInfo.title)](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
+                        valueRow += " ( [**\(ancestorInfo.title)**](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
                     }
                     content.append(valueRow)
                 }

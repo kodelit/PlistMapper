@@ -8,9 +8,9 @@
 
 ### Ancestors
 
-- com.apple.dt.unit.storyboardApplication ( [Storyboard App](Storyboard%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.storyboardApplication ( [**Storyboard App**](Storyboard%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
 
-- com.apple.dt.unit.coreDataCocoaTouchApplication ( [Core Data Cocoa Touch App](Core%20Data%20Cocoa%20Touch%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.coreDataCocoaTouchApplication ( [**Core Data Cocoa Touch App**](Core%20Data%20Cocoa%20Touch%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
 
 ---
 
