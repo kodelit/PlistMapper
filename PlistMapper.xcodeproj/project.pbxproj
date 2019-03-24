@@ -38,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		B52F72EE2246F37000379AC4 /* Output */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Output; sourceTree = "<group>"; };
+		B58476F82247CFAF0013B7FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B5AF820E2245171B0040AAF4 /* PlistMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PlistMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AF82112245171B0040AAF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5AF821922457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectTemplateInfoParser.swift; sourceTree = "<group>"; };
@@ -70,6 +71,7 @@
 		B5AF82052245171B0040AAF4 = {
 			isa = PBXGroup;
 			children = (
+				B58476F82247CFAF0013B7FC /* README.md */,
 				B52F72EE2246F37000379AC4 /* Output */,
 				B5AF82102245171B0040AAF4 /* PlistMapper */,
 				B5AF820F2245171B0040AAF4 /* Products */,

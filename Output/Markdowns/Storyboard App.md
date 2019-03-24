@@ -1,57 +1,49 @@
-# [Storyboard App](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate)
+# Storyboard App
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.storyboardApplication ( [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.storyboardApplication ( [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.cocoaTouchApplicationBase ( [Cocoa Touch App Base](Cocoa Touch App Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.cocoaTouchApplicationBase ( [Cocoa Touch App Base](Cocoa%20Touch%20App%20Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Definitions
+### Definitions : 
 
-- Info.plist:UIMainStoryboardFile
+- `Info.plist:UIMainStoryboardFile` : 
 
-	```
-	<key>UIMainStoryboardFile</key>
+```
+<key>UIMainStoryboardFile</key>
 <string>Main</string>
 
-	```
+```
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Nodes : 
 
-### Nodes
+`Info.plist:UIMainStoryboardFile`
 
-- `Info.plist:UIMainStoryboardFile`
+`Base.lproj/Main.storyboard`
 
-- `Base.lproj/Main.storyboard`
+### Options : 
 
-### Options
+- Identifier : `languageChoice`
 
-- Identifier
+- Units : 
 
-	- `languageChoice`
+	- `Objective-C` : 
 
-- Units
+		- Definitions : 
 
-	- Objective-C
+			- `*:implementation:methods:awakeFromNib:super` : `[super awakeFromNib];`
 
-		- Definitions
+	- Swift : 
 
-			- *:implementation:methods:awakeFromNib:super
+		- Definitions : 
 
-				- `[super awakeFromNib];`
-
-	- Swift
-
-		- Definitions
-
-			- *:implementation:methods:awakeFromNib:super
-
-				- `super.awakeFromNib()`
+			- `*:implementation:methods:awakeFromNib:super` : `super.awakeFromNib()`

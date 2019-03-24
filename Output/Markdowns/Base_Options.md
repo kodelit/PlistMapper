@@ -1,115 +1,63 @@
-# [Base_Options](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_Options.xctemplate)
+# Base_Options
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_Options ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_Options.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_Options ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_Options.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_Options.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Description : `Your new product's name`
 
-- Description
+- EmptyReplacement : `ProductName`
 
-	- `Your new product's name`
+- Identifier : `productName`
 
-- EmptyReplacement
+- Name : `Product Name:`
 
-	- `ProductName`
+- NotPersisted : `YES`
 
-- Identifier
+- Required : `YES`
 
-	- `productName`
+- SortOrder : `-2`
 
-- Name
+- Type : `text`
 
-	- `Product Name:`
+- Default : `___FULLUSERNAME___`
 
-- NotPersisted
+- Description : `Your company's name`
 
-	- YES
+- Identifier : `organizationName`
 
-- Required
+- Name : `Organization Name:`
 
-	- YES
+- Type : `text`
 
-- SortOrder
+- Description : `Your organization's bundle identifier prefix`
 
-	- -2
+- EmptyReplacement : `com.yourcompany`
 
-- Type
+- Identifier : `bundleIdentifierPrefix`
 
-	- `text`
+- Name : `Organization Identifier:`
 
-- Default
+- Required : `YES`
 
-	- `___FULLUSERNAME___`
+- Type : `text`
 
-- Description
+- Default : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___`
 
-	- `Your company's name`
+- Description : `Your new product's bundle identifier`
 
-- Identifier
+- Identifier : `bundleIdentifier`
 
-	- `organizationName`
+- Name : `Bundle Identifier:`
 
-- Name
+- NotPersisted : `YES`
 
-	- `Organization Name:`
-
-- Type
-
-	- `text`
-
-- Description
-
-	- `Your organization's bundle identifier prefix`
-
-- EmptyReplacement
-
-	- `com.yourcompany`
-
-- Identifier
-
-	- `bundleIdentifierPrefix`
-
-- Name
-
-	- `Organization Identifier:`
-
-- Required
-
-	- YES
-
-- Type
-
-	- `text`
-
-- Default
-
-	- `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___`
-
-- Description
-
-	- `Your new product's bundle identifier`
-
-- Identifier
-
-	- `bundleIdentifier`
-
-- Name
-
-	- `Bundle Identifier:`
-
-- NotPersisted
-
-	- YES
-
-- Type
-
-	- `static`
+- Type : `static`

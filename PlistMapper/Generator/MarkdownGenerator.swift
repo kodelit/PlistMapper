@@ -16,73 +16,107 @@ protocol MarkdownGenerator: TextContentGenerator {}
 
 extension MarkdownGenerator {
 
+    private static var noIndentationLevel:Int { return 3 }
+
     func rowIndentation(for level:Int) -> String {
-        let indent = level > 3 ? String(repeating: "\t", count: level - 4) : ""
+        let indent = level > Self.noIndentationLevel ? String(repeating: "\t", count: level - 4) : ""
         return indent
     }
 
     func rowPrefix(for level:Int) -> String {
-        let prefix = level > 3 ? "-" : String(repeating: "#", count: level)
+        let prefix = level > Self.noIndentationLevel ? "-" : String(repeating: "#", count: level)
         return prefix
     }
 
-    func rowBegining(for level:Int) -> String {
+    func rowBegining(for level:Int = noIndentationLevel) -> String {
         let prefix = self.rowPrefix(for: level)
         let indent = self.rowIndentation(for: level)
         let rowBegining = "\(indent)\(prefix) "
         return rowBegining
     }
 
+    func valueSufixWith(key:String?, level:Int) -> String {
+        guard key != nil else {
+            return self.rowBegining(for: level)
+        }
+        let characterSet = CharacterSet.punctuationCharacters
+        let shouldDisplayAsCode = key!.rangeOfCharacter(from: characterSet) != nil
+        let displayedKey = shouldDisplayAsCode ? "`\(key!)`" : key!
+        let sufix = self.rowBegining(for: level) + "\(displayedKey) : "
+        return sufix
+    }
+
     // MARK: - Values
 
     func rowForKey(_ key:String, indentationLevel level:Int) -> String {
-        let rowBegining = self.rowBegining(for: level)
-        return "\(rowBegining)\(key)"
+        return self.valueSufixWith(key: key, level: level)
     }
 
-    func rowForString(_ value:String, indentationLevel level:Int) -> String {
+    func rowForString(_ value:String, key:String? = nil, indentationLevel level:Int = noIndentationLevel) -> String {
         let rowIndentation = self.rowIndentation(for: level)
-        let rowBegining = self.rowBegining(for: level)
+        let valueSufix = self.valueSufixWith(key: key, level: level)
         let hasMultipleLines = value.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).contains("\n")
         let isTooLong = value.count > 100
+        let multilineSufix = key != nil ? valueSufix : rowIndentation
         if hasMultipleLines || isTooLong {
-            return "\(rowIndentation)```\n\(rowIndentation)\(value)\n\(rowIndentation)```"
+            let multilineSufix = key != nil ? valueSufix : rowIndentation
+            let adjustedValue = value.components(separatedBy: "\n").joined(separator: "\n\(rowIndentation)")
+            return "\(multilineSufix)" + "\n\n\(rowIndentation)```\n\(rowIndentation)\(adjustedValue)\n\(rowIndentation)```"
         }
-        return "\(rowBegining)`\(value)`"
+        return "\(multilineSufix)" + "`\(value)`"
     }
 
-    func rowForBool(_ value:Bool, indentationLevel level:Int) -> String {
-        let rowBegining = self.rowBegining(for: level)
-        return "\(rowBegining)\(value ? "YES" : "NO")"
+    func rowForBool(_ value:Bool, key:String? = nil, indentationLevel level:Int) -> String {
+        return "\(self.valueSufixWith(key: key, level: level))" + "`\(value ? "YES" : "NO")`"
+    }
+
+    func rowForNumber(_ value:NSNumber, key:String? = nil, indentationLevel level:Int) -> String {
+        return "\(self.valueSufixWith(key: key, level: level))" + "`\(String(describing: value))`"
     }
 
     func rowsForDictionary(_ dict:[String: Any], indentationLevel level:Int) -> [String] {
         let keys = Array(dict.keys).sorted()
         var result:[String] = []
         for key in keys {
-            let keyRow = self.rowForKey(key, indentationLevel: level)
-            result.append(keyRow)
-
             if let value = dict[key] {
-                let valueRows = self.rows(for: value, indentationLevel: level + 1)
+                let valueRows:[String]
+                if let string = value as? String {
+                    valueRows = [self.rowForString(string, key:key, indentationLevel: level)]
+                }else if let bool = value as? Bool {
+                    valueRows = [self.rowForBool(bool, key:key, indentationLevel: level)]
+                }else if let number = value as? NSNumber {
+                    valueRows = [self.rowForNumber(number, key:key, indentationLevel: level)]
+                }else{
+                    let keyRow = self.rowForKey(key, indentationLevel: level)
+                    result.append(keyRow)
+
+                    valueRows = self.rows(for: value, indentationLevel: level + 1)
+                }
                 result.append(contentsOf: valueRows)
             }
+
         }
         return result
     }
 
-    func rowsForArray(_ array:[Any], indentationLevel level:Int) -> [String] {
-        let rows = array.reduce(into: [String]()) { (result, value) in
-            let subrows = self.rows(for: value, indentationLevel: level)
-            result.append(contentsOf: subrows)
+    func rowsForArray(_ array:[Any], key:String? = nil, indentationLevel level:Int) -> [String] {
+        let rows:[String]
+        if let list = array as? [String] {
+            rows = list.reduce(into: [String]()) { (result, value) in
+                let text = self.rowForString(value, key: nil, indentationLevel: level)
+                result.append(text)
+            }
+        }else{
+            rows = array.reduce(into: [String]()) { (result, value) in
+                let subrows = self.rows(for: value, indentationLevel: level)
+                result.append(contentsOf: subrows)
+            }
         }
-        print("Array: ", rows.joined(separator: "\n"))
         return rows
     }
 
-    func rowForUnknown(_ value:Any, indentationLevel level:Int) -> String {
-        let rowBegining = self.rowBegining(for: level)
-        return "\(rowBegining)\(String(describing: value))"
+    func rowForUnknown(_ value:Any, key:String? = nil, indentationLevel level:Int) -> String {
+        return "\(self.valueSufixWith(key: key, level: level))`\(String(describing: value))`"
     }
 
     // MARK: - Main
@@ -128,13 +162,18 @@ extension MarkdownGenerator {
 
             ## \(fileName)\n\n`\(excapedPath)`
             """
+        }else if !hasPlistIdentifier {
+            content = """
+            # [\(name)](\(escapedFileDir))
+
+            ## [\(fileName)](\(excapedPath))
+            """
         }else{
-            content = "# [\(name)](\(escapedFileDir))"
-            if !hasPlistIdentifier {
-                content += "\n\n## [\(fileName)](\(excapedPath))"
-            }else{
-                content += "\n\n## \(fileName)"
-            }
+            content = """
+            # \(name)
+
+            ## \(fileName)
+            """
         }
 
         if let uniqueInfo = info as? UniquePlistDataType {
@@ -146,7 +185,7 @@ extension MarkdownGenerator {
                 content.append("\n\n### \(key)\n\n- \(id)")
 
                 if !isPathSymbolic {
-                    content.append(" ( [plist](\(excapedPath)) )")
+                    content.append(" ( [directory](\(escapedFileDir)), [plist](\(excapedPath)) )")
                 }
             }
 
@@ -163,9 +202,10 @@ extension MarkdownGenerator {
                     if let ancestorInfo = availableAncestorsById?[identifier],
                         let markdownFileName = ancestorInfo.outputFileName()
                     {
+                        let escapedDescriptionFileName = self.escaped(path: "\(markdownFileName).\(Markdown.fileExtension)")
                         let escapedFileDir = self.escaped(path: ancestorInfo.sourceDir())
                         let excapedPath = self.escaped(path: ancestorInfo.path)
-                        valueRow += " ( [\(ancestorInfo.title)](\(markdownFileName).\(Markdown.fileExtension)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
+                        valueRow += " ( [\(ancestorInfo.title)](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
                     }
                     content.append(valueRow)
                 }
@@ -173,7 +213,7 @@ extension MarkdownGenerator {
         }
 
         // add other properties
-        let other = self.rows(for: dict, indentationLevel: 3).joined(separator: "\n\n")
+        let other = self.rows(for: dict, indentationLevel: Self.noIndentationLevel).joined(separator: "\n\n")
         content.append("\n\n---\n\n\(other)")
         return content
     }

@@ -1,67 +1,45 @@
-# [Language Choice](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate)
+# Language Choice
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.languageChoice ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.languageChoice ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Default : `Swift`
 
-- Default
+- Description : `Your primary implementation language.`
 
-	- `Swift`
+- Identifier : `languageChoice`
 
-- Description
+- Name : `Language:`
 
-	- `Your primary implementation language.`
+- Required : `YES`
 
-- Identifier
+- Type : `popup`
 
-	- `languageChoice`
+- Values : 
 
-- Name
+	`Swift`
 
-	- `Language:`
+	`Objective-C`
 
-- Required
+- Variables : 
 
-	- YES
+	- `Objective-C` : 
 
-- Type
+		- ibCustomModuleProvider : ``
 
-	- `popup`
+		- moduleNamePrefixForClasses : ``
 
-- Values
+	- Swift : 
 
-	- `Swift`
+		- ibCustomModuleProvider : `target`
 
-	- `Objective-C`
-
-- Variables
-
-	- Objective-C
-
-		- ibCustomModuleProvider
-
-			- ``
-
-		- moduleNamePrefixForClasses
-
-			- ``
-
-	- Swift
-
-		- ibCustomModuleProvider
-
-			- `target`
-
-		- moduleNamePrefixForClasses
-
-			- `$(PRODUCT_MODULE_NAME).`
+		- moduleNamePrefixForClasses : `$(PRODUCT_MODULE_NAME).`

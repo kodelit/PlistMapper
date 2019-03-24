@@ -1,10 +1,10 @@
-# [Base](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base.xctemplate)
+# Base
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
@@ -18,6 +18,4 @@
 
 ---
 
-### Kind
-
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`

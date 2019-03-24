@@ -1,27 +1,23 @@
-# [iOS Base_Definitions](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate)
+# iOS Base_Definitions
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.iosBase_Definitions ( [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.iosBase_Definitions ( [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Definitions
+### Definitions : 
 
-- *:imports:importCocoa
+- `*:imports:importCocoa` : `#import <UIKit/UIKit.h>`
 
-	- `#import <UIKit/UIKit.h>`
+- `*:imports:importCocoaForUmbrellaHeader` : `#import <UIKit/UIKit.h>`
 
-- *:imports:importCocoaForUmbrellaHeader
+- `Info.plist:UISupportedInterfaceOrientations~iPad` : 
 
-	- `#import <UIKit/UIKit.h>`
-
-- Info.plist:UISupportedInterfaceOrientations~iPad
-
-	```
-	<key>UISupportedInterfaceOrientations~ipad</key>
+```
+<key>UISupportedInterfaceOrientations~ipad</key>
 <array>
     <string>UIInterfaceOrientationPortrait</string>
     <string>UIInterfaceOrientationPortraitUpsideDown</string>
@@ -29,78 +25,64 @@
     <string>UIInterfaceOrientationLandscapeRight</string>
 </array>
 
-	```
+```
 
-- Info.plist:UISupportedInterfaceOrientations~iPhone
+- `Info.plist:UISupportedInterfaceOrientations~iPhone` : 
 
-	```
-	<key>UISupportedInterfaceOrientations</key>
+```
+<key>UISupportedInterfaceOrientations</key>
 <array>
      <string>UIInterfaceOrientationPortrait</string>
      <string>UIInterfaceOrientationLandscapeLeft</string>
      <string>UIInterfaceOrientationLandscapeRight</string>
 </array>
 
-	```
+```
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Identifier : `languageChoice`
 
-- Identifier
+- Units : 
 
-	- `languageChoice`
+	- `Objective-C` : 
 
-- Units
+		- Definitions : 
 
-	- Objective-C
+			- `*:implementation:viewDidLoad` : 
 
-		- Definitions
+				- Beginning : 
 
-			- *:implementation:viewDidLoad
+				```
+				- (void)viewDidLoad {
+				    [super viewDidLoad];
+				    // Do any additional setup after loading the view, typically from a nib.
+				```
 
-				- Beginning
-
-					```
-					- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-					```
-
-				- End
-
-					- `}
+				- End : `}
 `
 
-				- Indent
+				- Indent : `YES`
 
-					- YES
+	- Swift : 
 
-	- Swift
+		- Definitions : 
 
-		- Definitions
+			- `*:implementation:viewDidLoad` : 
 
-			- *:implementation:viewDidLoad
+				- Beginning : 
 
-				- Beginning
+				```
+				override func viewDidLoad() {
+				    super.viewDidLoad()
+				    // Do any additional setup after loading the view, typically from a nib.
+				```
 
-					```
-					override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-					```
-
-				- End
-
-					- `}
+				- End : `}
 `
 
-				- Indent
+				- Indent : `YES`
 
-					- YES
-
-			- *:imports:importCocoa
-
-				- `import UIKit`
+			- `*:imports:importCocoa` : `import UIKit`

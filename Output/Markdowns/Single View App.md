@@ -1,87 +1,75 @@
-# [Single View App](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Single%20View%20App.xctemplate)
+# Single View App
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.singleViewApplication ( [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Single%20View%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.singleViewApplication ( [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Single%20View%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Single%20View%20App.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.storyboardApplication ( [Storyboard App](Storyboard App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.storyboardApplication ( [Storyboard App](Storyboard%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Storyboard%20App.xctemplate/TemplateInfo.plist) )
 
-- com.apple.dt.unit.coreDataCocoaTouchApplication ( [Core Data Cocoa Touch App](Core Data Cocoa Touch App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.coreDataCocoaTouchApplication ( [Core Data Cocoa Touch App](Core%20Data%20Cocoa%20Touch%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Concrete
+### Concrete : `YES`
 
-- YES
+### Definitions : 
 
-### Definitions
+- `Base.lproj/Main.storyboard` : 
 
-- Base.lproj/Main.storyboard
+	- Path : `Main.storyboard`
 
-	- Path
+	- SortOrder : `99`
 
-		- `Main.storyboard`
-
-	- SortOrder
-
-		- 99
-
-### Description
+### Description : 
 
 ```
 This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.
 ```
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Identifier : `languageChoice`
 
-- Identifier
+- Units : 
 
-	- `languageChoice`
+	- `Objective-C` : 
 
-- Units
+		- Nodes : 
 
-	- Objective-C
+			`ViewController.h:comments`
 
-		- Nodes
+			`ViewController.h:imports:importCocoa`
 
-			- `ViewController.h:comments`
+			`ViewController.h:interface(___FILEBASENAME___ : UIViewController)`
 
-			- `ViewController.h:imports:importCocoa`
+			`ViewController.m:comments`
 
-			- `ViewController.h:interface(___FILEBASENAME___ : UIViewController)`
+			`ViewController.m:imports:importHeader:ViewController.h`
 
-			- `ViewController.m:comments`
+			`ViewController.m:extension`
 
-			- `ViewController.m:imports:importHeader:ViewController.h`
+			`ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)`
 
-			- `ViewController.m:extension`
+			`ViewController.m:implementation:methods:viewDidLoad:super`
 
-			- `ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)`
+	- Swift : 
 
-			- `ViewController.m:implementation:methods:viewDidLoad:super`
+		- Nodes : 
 
-	- Swift
+			`ViewController.swift:comments`
 
-		- Nodes
+			`ViewController.swift:imports:importCocoa`
 
-			- `ViewController.swift:comments`
+			`ViewController.swift:implementation(___FILEBASENAME___: UIViewController)`
 
-			- `ViewController.swift:imports:importCocoa`
+			`ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))`
 
-			- `ViewController.swift:implementation(___FILEBASENAME___: UIViewController)`
+			`ViewController.swift:implementation:methods:viewDidLoad:super`
 
-			- `ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))`
-
-			- `ViewController.swift:implementation:methods:viewDidLoad:super`
-
-### SortOrder
-
-- YES
+### SortOrder : `YES`

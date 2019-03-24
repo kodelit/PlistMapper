@@ -1,217 +1,153 @@
-# [Base_DefinitionsLanguage](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate)
+# Base_DefinitionsLanguage
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_DefinitionsLanguage ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_DefinitionsLanguage ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsLanguage.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Definitions
+### Definitions : 
 
-- *:class:*
-
-	- `@class ___*___;
+- `*:class:*` : `@class ___*___;
 `
 
-- *:comments
-
-	- `//___FILEHEADER___
+- `*:comments` : `//___FILEHEADER___
 `
 
-- *:extension
+- `*:extension` : 
 
-	- Beginning
-
-		- `@interface ___FILEBASENAME___ ()
+	- Beginning : `@interface ___FILEBASENAME___ ()
 `
 
-	- End
-
-		- `@end
+	- End : `@end
 `
 
-- *:implementation
+- `*:implementation` : 
 
-	- Beginning
-
-		- `@implementation ___FILEBASENAME___
+	- Beginning : `@implementation ___FILEBASENAME___
 `
 
-	- End
+	- End : `@end`
 
-		- `@end`
+- `*:implementation:methods` : 
 
-- *:implementation:methods
+	- Beginning : ``
 
-	- Beginning
+	- End : ``
 
-		- ``
+- `*:implementation:methods:*` : 
 
-	- End
+	- Beginning : `___*___ {`
 
-		- ``
-
-- *:implementation:methods:*
-
-	- Beginning
-
-		- `___*___ {`
-
-	- End
-
-		- `}
+	- End : `}
 
 `
 
-	- Indent
+	- Indent : `YES`
 
-		- YES
+- `*:implementation:methods:init` : 
 
-- *:implementation:methods:init
+	- Beginning : 
 
-	- Beginning
+	```
+	- (instancetype)init {
+	    self = [super init];
+	    if (self) {
+	```
 
-		```
-		- (instancetype)init {
-    self = [super init];
-    if (self) {
-		```
+	- End : 
 
-	- End
+	```
+	    }
+	    return self;
+	}
+	
+	```
 
-		```
-		    }
-    return self;
-}
+	- Indent : `2`
 
-		```
+- `*:implementation:properties` : 
 
-	- Indent
+	- Beginning : ``
 
-		- 2
-
-- *:implementation:properties
-
-	- Beginning
-
-		- ``
-
-	- End
-
-		- `
+	- End : `
 
 `
 
-- *:implementation:synthesize
+- `*:implementation:synthesize` : 
 
-	- End
-
-		- `
+	- End : `
 `
 
-- *:implementation:synthesize:*
+- `*:implementation:synthesize:*` : `@synthesize ___*___;`
 
-	- `@synthesize ___*___;`
+- `*:imports` : 
 
-- *:imports
+	- Beginning : ``
 
-	- Beginning
-
-		- ``
-
-	- End
-
-		- `
+	- End : `
 `
 
-- *:imports:importFramework:*
+- `*:imports:importFramework:*` : `#import <___*___/___*___.h>`
 
-	- `#import <___*___/___*___.h>`
+- `*:imports:importHeader:*` : `#import "___*___"`
 
-- *:imports:importHeader:*
+- `*:interface` : 
 
-	- `#import "___*___"`
-
-- *:interface
-
-	- Beginning
-
-		- `@interface ___*___
+	- Beginning : `@interface ___*___
 `
 
-	- End
-
-		- `
+	- End : `
 @end
 `
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Identifier : `languageChoice`
 
-- Identifier
+- Units : 
 
-	- `languageChoice`
+	- `Objective-C` : 
 
-- Units
+		- Definitions : 
 
-	- Objective-C
+	- Swift : 
 
-		- Definitions
+		- Definitions : 
 
-	- Swift
+			- `*:class:*` : ``
 
-		- Definitions
+			- `*:implementation` : 
 
-			- *:class:*
-
-				- ``
-
-			- *:implementation
-
-				- Beginning
-
-					- `class ___*___ {
+				- Beginning : `class ___*___ {
 `
 
-				- End
-
-					- `
+				- End : `
 }
 `
 
-				- Indent
+				- Indent : `YES`
 
-					- YES
+			- `*:implementation:methods:init` : 
 
-			- *:implementation:methods:init
+				- Beginning : 
 
-				- Beginning
+				```
+				override init() {
+				    super.init()
+				
+				```
 
-					```
-					override init() {
-    super.init()
-
-					```
-
-				- End
-
-					- `}
+				- End : `}
 
 `
 
-				- Indent
+				- Indent : `YES`
 
-					- YES
+			- `*:imports:importFramework:*` : `import ___*___`
 
-			- *:imports:importFramework:*
-
-				- `import ___*___`
-
-			- *:imports:importHeader:*
-
-				- ``
+			- `*:imports:importHeader:*` : ``

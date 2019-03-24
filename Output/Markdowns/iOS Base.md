@@ -1,53 +1,41 @@
-# [iOS Base](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate)
+# iOS Base
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.iosBase ( [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.iosBase ( [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.iosBase_Definitions ( [iOS Base_Definitions](iOS Base_Definitions.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.iosBase_Definitions ( [iOS Base_Definitions](iOS%20Base_Definitions.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Platforms : 
 
-### Platforms
+`com.apple.platform.iphoneos`
 
-- `com.apple.platform.iphoneos`
+### Project : 
 
-### Project
+- Configurations : 
 
-- Configurations
+	- Release : 
 
-	- Release
+		- `VALIDATE_PRODUCT` : `YES`
 
-		- VALIDATE_PRODUCT
+- SDK : `iphoneos`
 
-			- `YES`
+- SharedSettings : 
 
-- SDK
+	- `CODE_SIGN_IDENTITY` : `iPhone Developer`
 
-	- `iphoneos`
+	- `IPHONEOS_DEPLOYMENT_TARGET` : `latest_iphoneos`
 
-- SharedSettings
+### Targets : 
 
-	- CODE_SIGN_IDENTITY
+- SharedSettings : 
 
-		- `iPhone Developer`
-
-	- IPHONEOS_DEPLOYMENT_TARGET
-
-		- `latest_iphoneos`
-
-### Targets
-
-- SharedSettings
-
-	- TARGETED_DEVICE_FAMILY
-
-		- `1,2`
+	- `TARGETED_DEVICE_FAMILY` : `1,2`

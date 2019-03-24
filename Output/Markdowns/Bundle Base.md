@@ -1,10 +1,10 @@
-# [Bundle Base](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate)
+# Bundle Base
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.bundleBase ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.bundleBase ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
@@ -12,32 +12,26 @@
 
 ---
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Nodes : 
 
-### Nodes
+`Info.plist:Identifier`
 
-- `Info.plist:Identifier`
+`Info.plist:PlistVersion`
 
-- `Info.plist:PlistVersion`
+`Info.plist:Executable`
 
-- `Info.plist:Executable`
+`Info.plist:BundleName`
 
-- `Info.plist:BundleName`
+`Info.plist:DevelopmentRegion`
 
-- `Info.plist:DevelopmentRegion`
+`Info.plist:ProductVersion`
 
-- `Info.plist:ProductVersion`
+### Targets : 
 
-### Targets
+- SharedSettings : 
 
-- SharedSettings
+	- `INFOPLIST_FILE` : `___PACKAGENAME___/Info.plist`
 
-	- INFOPLIST_FILE
-
-		- `___PACKAGENAME___/Info.plist`
-
-	- PRODUCT_BUNDLE_IDENTIFIER
-
-		- `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`
+	- `PRODUCT_BUNDLE_IDENTIFIER` : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`

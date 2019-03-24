@@ -1,291 +1,169 @@
-# [Base_ProjectSettings](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate)
+# Base_ProjectSettings
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.base_ProjectSettings ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.base_ProjectSettings ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_ProjectSettings.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Options : 
 
-### Options
+- Identifier : `languageChoice`
 
-- Identifier
+- Units : 
 
-	- `languageChoice`
+	- Swift : 
 
-- Units
+		- Project : 
 
-	- Swift
+			- Configurations : 
 
-		- Project
+				- Debug : 
 
-			- Configurations
+					- `SWIFT_ACTIVE_COMPILATION_CONDITIONS` : `DEBUG`
 
-				- Debug
+					- `SWIFT_OPTIMIZATION_LEVEL` : `-Onone`
 
-					- SWIFT_ACTIVE_COMPILATION_CONDITIONS
+				- Release : 
 
-						- `DEBUG`
+					- `SWIFT_COMPILATION_MODE` : `wholemodule`
 
-					- SWIFT_OPTIMIZATION_LEVEL
+					- `SWIFT_OPTIMIZATION_LEVEL` : `-O`
 
-						- `-Onone`
+		- Targets : 
 
-				- Release
+			- Concrete : `NO`
 
-					- SWIFT_COMPILATION_MODE
+			- SharedSettings : 
 
-						- `wholemodule`
+				- `SWIFT_VERSION` : `4.2`
 
-					- SWIFT_OPTIMIZATION_LEVEL
+### Project : 
 
-						- `-O`
+- Configurations : 
 
-		- Targets
+	- Debug : 
 
-			- Concrete
+		- `DEBUG_INFORMATION_FORMAT` : `dwarf`
 
-				- NO
+		- `ENABLE_TESTABILITY` : `YES`
 
-			- SharedSettings
+		- `GCC_DYNAMIC_NO_PIC` : `NO`
 
-				- SWIFT_VERSION
+		- `GCC_OPTIMIZATION_LEVEL` : `0`
 
-					- `4.2`
+		- `GCC_PREPROCESSOR_DEFINITIONS` : `DEBUG=1 $(inherited)`
 
-### Project
+		- `MTL_ENABLE_DEBUG_INFO` : `INCLUDE_SOURCE`
 
-- Configurations
+		- `ONLY_ACTIVE_ARCH` : `YES`
 
-	- Debug
+	- Release : 
 
-		- DEBUG_INFORMATION_FORMAT
+		- `DEBUG_INFORMATION_FORMAT` : `dwarf-with-dsym`
 
-			- `dwarf`
+		- `ENABLE_NS_ASSERTIONS` : `NO`
 
-		- ENABLE_TESTABILITY
+		- `MTL_ENABLE_DEBUG_INFO` : `NO`
 
-			- `YES`
+- SharedSettings : 
 
-		- GCC_DYNAMIC_NO_PIC
+	- `ALWAYS_SEARCH_USER_PATHS` : `NO`
 
-			- `NO`
+	- `CLANG_ANALYZER_NONNULL` : `YES`
 
-		- GCC_OPTIMIZATION_LEVEL
+	- `CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION` : `YES_AGGRESSIVE`
 
-			- `0`
+	- `CLANG_CXX_LANGUAGE_STANDARD` : `gnu++14`
 
-		- GCC_PREPROCESSOR_DEFINITIONS
+	- `CLANG_CXX_LIBRARY` : `libc++`
 
-			- `DEBUG=1 $(inherited)`
+	- `CLANG_ENABLE_MODULES` : `YES`
 
-		- MTL_ENABLE_DEBUG_INFO
+	- `CLANG_ENABLE_OBJC_ARC` : `YES`
 
-			- `INCLUDE_SOURCE`
+	- `CLANG_ENABLE_OBJC_WEAK` : `YES`
 
-		- ONLY_ACTIVE_ARCH
+	- `CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING` : `YES`
 
-			- `YES`
+	- `CLANG_WARN_BOOL_CONVERSION` : `YES`
 
-	- Release
+	- `CLANG_WARN_COMMA` : `YES`
 
-		- DEBUG_INFORMATION_FORMAT
+	- `CLANG_WARN_CONSTANT_CONVERSION` : `YES`
 
-			- `dwarf-with-dsym`
+	- `CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS` : `YES`
 
-		- ENABLE_NS_ASSERTIONS
+	- `CLANG_WARN_DIRECT_OBJC_ISA_USAGE` : `YES_ERROR`
 
-			- `NO`
+	- `CLANG_WARN_DOCUMENTATION_COMMENTS` : `YES`
 
-		- MTL_ENABLE_DEBUG_INFO
+	- `CLANG_WARN_EMPTY_BODY` : `YES`
 
-			- `NO`
+	- `CLANG_WARN_ENUM_CONVERSION` : `YES`
 
-- SharedSettings
+	- `CLANG_WARN_INFINITE_RECURSION` : `YES`
 
-	- ALWAYS_SEARCH_USER_PATHS
+	- `CLANG_WARN_INT_CONVERSION` : `YES`
 
-		- `NO`
+	- `CLANG_WARN_NON_LITERAL_NULL_CONVERSION` : `YES`
 
-	- CLANG_ANALYZER_NONNULL
+	- `CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF` : `YES`
 
-		- `YES`
+	- `CLANG_WARN_OBJC_LITERAL_CONVERSION` : `YES`
 
-	- CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION
+	- `CLANG_WARN_OBJC_ROOT_CLASS` : `YES_ERROR`
 
-		- `YES_AGGRESSIVE`
+	- `CLANG_WARN_RANGE_LOOP_ANALYSIS` : `YES`
 
-	- CLANG_CXX_LANGUAGE_STANDARD
+	- `CLANG_WARN_STRICT_PROTOTYPES` : `YES`
 
-		- `gnu++14`
+	- `CLANG_WARN_SUSPICIOUS_MOVE` : `YES`
 
-	- CLANG_CXX_LIBRARY
+	- `CLANG_WARN_UNGUARDED_AVAILABILITY` : `YES_AGGRESSIVE`
 
-		- `libc++`
+	- `CLANG_WARN_UNREACHABLE_CODE` : `YES`
 
-	- CLANG_ENABLE_MODULES
+	- `CLANG_WARN__DUPLICATE_METHOD_MATCH` : `YES`
 
-		- `YES`
+	- `COPY_PHASE_STRIP` : `NO`
 
-	- CLANG_ENABLE_OBJC_ARC
+	- `ENABLE_STRICT_OBJC_MSGSEND` : `YES`
 
-		- `YES`
+	- `GCC_C_LANGUAGE_STANDARD` : `gnu11`
 
-	- CLANG_ENABLE_OBJC_WEAK
+	- `GCC_NO_COMMON_BLOCKS` : `YES`
 
-		- `YES`
+	- `GCC_WARN_64_TO_32_BIT_CONVERSION` : `YES`
 
-	- CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING
+	- `GCC_WARN_ABOUT_RETURN_TYPE` : `YES_ERROR`
 
-		- `YES`
+	- `GCC_WARN_UNDECLARED_SELECTOR` : `YES`
 
-	- CLANG_WARN_BOOL_CONVERSION
+	- `GCC_WARN_UNINITIALIZED_AUTOS` : `YES_AGGRESSIVE`
 
-		- `YES`
+	- `GCC_WARN_UNUSED_FUNCTION` : `YES`
 
-	- CLANG_WARN_COMMA
+	- `GCC_WARN_UNUSED_VARIABLE` : `YES`
 
-		- `YES`
+	- `MTL_FAST_MATH` : `YES`
 
-	- CLANG_WARN_CONSTANT_CONVERSION
+### Targets : 
 
-		- `YES`
+- Concrete : `NO`
 
-	- CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS
+- Configurations : 
 
-		- `YES`
+	- Debug : 
 
-	- CLANG_WARN_DIRECT_OBJC_ISA_USAGE
+	- Release : 
 
-		- `YES_ERROR`
+- Name : `___PACKAGENAME___`
 
-	- CLANG_WARN_DOCUMENTATION_COMMENTS
+- SharedSettings : 
 
-		- `YES`
-
-	- CLANG_WARN_EMPTY_BODY
-
-		- `YES`
-
-	- CLANG_WARN_ENUM_CONVERSION
-
-		- `YES`
-
-	- CLANG_WARN_INFINITE_RECURSION
-
-		- `YES`
-
-	- CLANG_WARN_INT_CONVERSION
-
-		- `YES`
-
-	- CLANG_WARN_NON_LITERAL_NULL_CONVERSION
-
-		- `YES`
-
-	- CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF
-
-		- `YES`
-
-	- CLANG_WARN_OBJC_LITERAL_CONVERSION
-
-		- `YES`
-
-	- CLANG_WARN_OBJC_ROOT_CLASS
-
-		- `YES_ERROR`
-
-	- CLANG_WARN_RANGE_LOOP_ANALYSIS
-
-		- `YES`
-
-	- CLANG_WARN_STRICT_PROTOTYPES
-
-		- `YES`
-
-	- CLANG_WARN_SUSPICIOUS_MOVE
-
-		- `YES`
-
-	- CLANG_WARN_UNGUARDED_AVAILABILITY
-
-		- `YES_AGGRESSIVE`
-
-	- CLANG_WARN_UNREACHABLE_CODE
-
-		- `YES`
-
-	- CLANG_WARN__DUPLICATE_METHOD_MATCH
-
-		- `YES`
-
-	- COPY_PHASE_STRIP
-
-		- `NO`
-
-	- ENABLE_STRICT_OBJC_MSGSEND
-
-		- `YES`
-
-	- GCC_C_LANGUAGE_STANDARD
-
-		- `gnu11`
-
-	- GCC_NO_COMMON_BLOCKS
-
-		- `YES`
-
-	- GCC_WARN_64_TO_32_BIT_CONVERSION
-
-		- `YES`
-
-	- GCC_WARN_ABOUT_RETURN_TYPE
-
-		- `YES_ERROR`
-
-	- GCC_WARN_UNDECLARED_SELECTOR
-
-		- `YES`
-
-	- GCC_WARN_UNINITIALIZED_AUTOS
-
-		- `YES_AGGRESSIVE`
-
-	- GCC_WARN_UNUSED_FUNCTION
-
-		- `YES`
-
-	- GCC_WARN_UNUSED_VARIABLE
-
-		- `YES`
-
-	- MTL_FAST_MATH
-
-		- `YES`
-
-### Targets
-
-- Concrete
-
-	- NO
-
-- Configurations
-
-	- Debug
-
-	- Release
-
-- Name
-
-	- `___PACKAGENAME___`
-
-- SharedSettings
-
-	- PRODUCT_NAME
-
-		- `$(TARGET_NAME)`
+	- `PRODUCT_NAME` : `$(TARGET_NAME)`

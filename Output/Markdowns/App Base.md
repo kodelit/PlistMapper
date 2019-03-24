@@ -1,99 +1,73 @@
-# [App Base](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate)
+# App Base
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.applicationBase ( [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.applicationBase ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.bundleBase ( [Bundle Base](Bundle Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.bundleBase ( [Bundle Base](Bundle%20Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Bundle%20Base.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Definitions
+### Definitions : 
 
-- Info.plist:PackageType
+- `Info.plist:PackageType` : 
 
-	```
-	<key>CFBundlePackageType</key>
+```
+<key>CFBundlePackageType</key>
 <string>APPL</string>
 
-	```
+```
 
-- main.m
+- `main.m` : 
 
-	- SortOrder
+	- SortOrder : `999`
 
-		- 999
+- `main.m:main` : 
 
-- main.m:main
+	- Beginning : `int main(int argc, const char * argv[]) {`
 
-	- Beginning
+	- End : `}`
 
-		- `int main(int argc, const char * argv[]) {`
+	- Indent : `YES`
 
-	- End
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-		- `}`
+### Nodes : 
 
-	- Indent
+`Info.plist:PackageType`
 
-		- YES
+### Options : 
 
-### Kind
+- Identifier : `languageChoice`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+- Units : 
 
-### Nodes
+	- Swift : 
 
-- `Info.plist:PackageType`
+		- Definitions : 
 
-### Options
+			- `main.swift` : 
 
-- Identifier
+				- SortOrder : `999`
 
-	- `languageChoice`
+			- `main.swift:main` : 
 
-- Units
+				- Beginning : ``
 
-	- Swift
+				- End : ``
 
-		- Definitions
+### Targets : 
 
-			- main.swift
+- BuildPhases : 
 
-				- SortOrder
+	- Class : `Sources`
 
-					- 999
+	- Class : `Frameworks`
 
-			- main.swift:main
+	- Class : `Resources`
 
-				- Beginning
-
-					- ``
-
-				- End
-
-					- ``
-
-### Targets
-
-- BuildPhases
-
-	- Class
-
-		- `Sources`
-
-	- Class
-
-		- `Frameworks`
-
-	- Class
-
-		- `Resources`
-
-- ProductType
-
-	- `com.apple.product-type.application`
+- ProductType : `com.apple.product-type.application`

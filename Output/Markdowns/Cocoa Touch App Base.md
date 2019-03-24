@@ -1,134 +1,114 @@
-# [Cocoa Touch App Base](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate)
+# Cocoa Touch App Base
 
 ## TemplateInfo
 
 ### Identifier
 
-- com.apple.dt.unit.cocoaTouchApplicationBase ( [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.cocoaTouchApplicationBase ( [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Cocoa%20Touch%20App%20Base.xctemplate/TemplateInfo.plist) )
 
 ### Ancestors
 
-- com.apple.dt.unit.applicationBase ( [App Base](App Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.applicationBase ( [App Base](App%20Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/App%20Base.xctemplate/TemplateInfo.plist) )
 
-- com.apple.dt.unit.iosBase ( [iOS Base](iOS Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.iosBase ( [iOS Base](iOS%20Base.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base.xctemplate/TemplateInfo.plist) )
 
-- com.apple.dt.unit.languageChoice ( [Language Choice](Language Choice.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
+- com.apple.dt.unit.languageChoice ( [Language Choice](Language%20Choice.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
 
 ---
 
-### Definitions
+### Definitions : 
 
-- *:implementation:methods:applicationDidBecomeActive:comments
+- `*:implementation:methods:applicationDidBecomeActive:comments` : 
 
-	```
-	// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-	```
+```
+// Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+```
 
-- *:implementation:methods:applicationDidEnterBackground:comments
+- `*:implementation:methods:applicationDidEnterBackground:comments` : 
 
-	```
-	// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
+```
+// Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
 // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 
-	```
+```
 
-- *:implementation:methods:applicationWillEnterForeground:comments
+- `*:implementation:methods:applicationWillEnterForeground:comments` : 
 
-	```
-	// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
-	```
+```
+// Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+```
 
-- *:implementation:methods:applicationWillResignActive:comments
+- `*:implementation:methods:applicationWillResignActive:comments` : 
 
-	```
-	// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
+```
+// Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
 // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
 
-	```
+```
 
-- *:implementation:methods:applicationWillTerminate:comments
+- `*:implementation:methods:applicationWillTerminate:comments` : 
 
-	```
-	// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-	```
+```
+// Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+```
 
-- Assets.xcassets
+- `Assets.xcassets` : 
 
-	- AssetGeneration
+	- AssetGeneration : 
 
-		- Name
+		- Name : `AppIcon`
 
-			- `AppIcon`
+		- Platforms : 
 
-		- Platforms
+			- iOS : `true`
 
-			- iOS
+		- Type : `appicon`
 
-				- `true`
+	- Path : `Images.xcassets`
 
-		- Type
+	- SortOrder : `100`
 
-			- `appicon`
+- `Base.lproj/LaunchScreen.storyboard` : 
 
-	- Path
+	- Path : `LaunchScreen.storyboard`
 
-		- `Images.xcassets`
+	- SortOrder : `101`
 
-	- SortOrder
+- `Info.plist:LaunchScreen` : 
 
-		- 100
-
-- Base.lproj/LaunchScreen.storyboard
-
-	- Path
-
-		- `LaunchScreen.storyboard`
-
-	- SortOrder
-
-		- 101
-
-- Info.plist:LaunchScreen
-
-	```
-	<key>UILaunchStoryboardName</key>
+```
+<key>UILaunchStoryboardName</key>
 <string>LaunchScreen</string>
 
-	```
+```
 
-- Info.plist:UIRequiredDeviceCapabilities
+- `Info.plist:UIRequiredDeviceCapabilities` : 
 
-	- Beginning
-
-		```
-		<key>UIRequiredDeviceCapabilities</key>
-<array>
-		```
-
-	- End
-
-		- `</array>`
-
-	- Indent
-
-		- YES
-
-- Info.plist:UIRequiredDeviceCapabilities:base
-
-	- `<string>armv7</string>`
-
-- Info.plist:iPhone
+	- Beginning : 
 
 	```
-	<key>LSRequiresIPhoneOS</key>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+	```
+
+	- End : `</array>`
+
+	- Indent : `YES`
+
+- `Info.plist:UIRequiredDeviceCapabilities:base` : `<string>armv7</string>`
+
+- `Info.plist:iPhone` : 
+
+```
+<key>LSRequiresIPhoneOS</key>
 <true/>
 
-	```
+```
 
-- Info.plist:statusBarTintForNavBar
+- `Info.plist:statusBarTintForNavBar` : 
 
-	```
-	<key>UIStatusBarTintParameters</key>
+```
+<key>UIStatusBarTintParameters</key>
 <dict>
     <key>UINavigationBar</key>
     <dict>
@@ -139,316 +119,276 @@
     </dict>
 </dict>
 
-	```
+```
 
-### Kind
+### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-- `Xcode.Xcode3.ProjectTemplateUnitKind`
+### Nodes : 
 
-### Nodes
+`Info.plist:iPhone`
 
-- `Info.plist:iPhone`
+`Info.plist:UIRequiredDeviceCapabilities:base`
 
-- `Info.plist:UIRequiredDeviceCapabilities:base`
+`Info.plist:LaunchScreen`
 
-- `Info.plist:LaunchScreen`
+`Info.plist:UISupportedInterfaceOrientations~iPhone`
 
-- `Info.plist:UISupportedInterfaceOrientations~iPhone`
+`Info.plist:UISupportedInterfaceOrientations~iPad`
 
-- `Info.plist:UISupportedInterfaceOrientations~iPad`
+`Assets.xcassets`
 
-- `Assets.xcassets`
+`Base.lproj/LaunchScreen.storyboard`
 
-- `Base.lproj/LaunchScreen.storyboard`
+### Options : 
 
-### Options
+- Default : `true`
 
-- Default
+- Identifier : `hasUnitTests`
 
-	- `true`
+- Name : `Include Unit Tests`
 
-- Identifier
+- NotPersisted : `NO`
 
-	- `hasUnitTests`
+- SortOrder : `100`
 
-- Name
+- Type : `checkbox`
 
-	- `Include Unit Tests`
+- Units : 
 
-- NotPersisted
+	- true : 
 
-	- NO
+		- Components : 
 
-- SortOrder
+			- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle`
 
-	- 100
+			- Name : `___PACKAGENAME___Tests`
 
-- Type
+- Default : `true`
 
-	- `checkbox`
+- Identifier : `hasUITests`
 
-- Units
+- Name : `Include UI Tests`
 
-	- true
+- NotPersisted : `NO`
 
-		- Components
+- SortOrder : `101`
 
-			- Identifier
+- Type : `checkbox`
 
-				- `com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle`
+- Units : 
 
-			- Name
+	- true : 
 
-				- `___PACKAGENAME___Tests`
+		- Components : 
 
-- Default
+			- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUITestBundle`
 
-	- `true`
+			- Name : `___PACKAGENAME___UITests`
 
-- Identifier
+- Identifier : `languageChoice`
 
-	- `hasUITests`
+- Units : 
 
-- Name
+	- `Objective-C` : 
 
-	- `Include UI Tests`
+		- Definitions : 
 
-- NotPersisted
+			- `*:implementation:methods:viewDidLoad:super` : 
 
-	- NO
+			```
+			[super viewDidLoad];
+			// Do any additional setup after loading the view, typically from a nib.
+			```
 
-- SortOrder
-
-	- 101
-
-- Type
-
-	- `checkbox`
-
-- Units
-
-	- true
-
-		- Components
-
-			- Identifier
-
-				- `com.apple.dt.unit.cocoaTouchApplicationUITestBundle`
-
-			- Name
-
-				- `___PACKAGENAME___UITests`
-
-- Identifier
-
-	- `languageChoice`
-
-- Units
-
-	- Objective-C
-
-		- Definitions
-
-			- *:implementation:methods:viewDidLoad:super
-
-				```
-				[super viewDidLoad];
-// Do any additional setup after loading the view, typically from a nib.
-				```
-
-			- AppDelegate.h:interface:window
-
-				- `@property (strong, nonatomic) UIWindow *window;
+			- `AppDelegate.h:interface:window` : `@property (strong, nonatomic) UIWindow *window;
 `
 
-			- AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body
+			- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
 
-				- `// Override point for customization after application launch.`
+			- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return YES;`
 
-			- AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return
+			- `main.m:main` : 
 
-				- `return YES;`
+				- Beginning : `int main(int argc, char * argv[]) {`
 
-			- main.m:main
+				- End : `}`
 
-				- Beginning
+				- Indent : `YES`
 
-					- `int main(int argc, char * argv[]) {`
+			- `main.m:main:UIApplicationMain` : 
 
-				- End
+			```
+			@autoreleasepool {
+			    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+			}
+			
+			```
 
-					- `}`
+		- Nodes : 
 
-				- Indent
+			`main.m:comments`
 
-					- YES
+			`main.m:imports:importCocoa`
 
-			- main.m:main:UIApplicationMain
+			`main.m:imports:importHeader:AppDelegate.h`
 
-				```
-				@autoreleasepool {
-    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-}
+			`main.m:main:UIApplicationMain`
 
-				```
+			`AppDelegate.h:comments`
 
-		- Nodes
+			`AppDelegate.h:imports:importCocoa`
 
-			- `main.m:comments`
+			`AppDelegate.h:interface(AppDelegate : UIResponder <UIApplicationDelegate>)`
 
-			- `main.m:imports:importCocoa`
+			`AppDelegate.h:interface:window`
 
-			- `main.m:imports:importHeader:AppDelegate.h`
+			`AppDelegate.m:comments`
 
-			- `main.m:main:UIApplicationMain`
+			`AppDelegate.m:imports:importHeader:AppDelegate.h`
 
-			- `AppDelegate.h:comments`
+			`AppDelegate.m:extension`
 
-			- `AppDelegate.h:imports:importCocoa`
+			`AppDelegate.m:implementation:synthesize`
 
-			- `AppDelegate.h:interface(AppDelegate : UIResponder <UIApplicationDelegate>)`
-
-			- `AppDelegate.h:interface:window`
-
-			- `AppDelegate.m:comments`
-
-			- `AppDelegate.m:imports:importHeader:AppDelegate.h`
-
-			- `AppDelegate.m:extension`
-
-			- `AppDelegate.m:implementation:synthesize`
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
+			`AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
 
-			- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+			`AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationWillResignActive(- (void\)applicationWillResignActive:(UIApplication *\)application)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationWillResignActive:comments`
+			`AppDelegate.m:implementation:methods:applicationWillResignActive:comments`
+
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationDidEnterBackground(- (void\)applicationDidEnterBackground:(UIApplication *\)application)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments`
+			`AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments`
+
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationWillEnterForeground(- (void\)applicationWillEnterForeground:(UIApplication *\)application)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments`
+			`AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments`
+
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationDidBecomeActive(- (void\)applicationDidBecomeActive:(UIApplication *\)application)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments`
+			`AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments`
+
+			
 
 			```
 			AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(UIApplication *\)application)
 			```
 
-			- `AppDelegate.m:implementation:methods:applicationWillTerminate:comments`
+			`AppDelegate.m:implementation:methods:applicationWillTerminate:comments`
 
-	- Swift
+	- Swift : 
 
-		- Definitions
+		- Definitions : 
 
-			- *:implementation:methods:viewDidLoad:super
+			- `*:implementation:methods:viewDidLoad:super` : 
 
-				```
-				super.viewDidLoad()
-// Do any additional setup after loading the view, typically from a nib.
-				```
+			```
+			super.viewDidLoad()
+			// Do any additional setup after loading the view, typically from a nib.
+			```
 
-			- AppDelegate.swift:UIApplicationMain
+			- `AppDelegate.swift:UIApplicationMain` : `@UIApplicationMain`
 
-				- `@UIApplicationMain`
+			- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
 
-			- AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body
+			- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return true`
 
-				- `// Override point for customization after application launch.`
+			- `AppDelegate.swift:implementation:properties:window` : `var window: UIWindow?`
 
-			- AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return
+		- Nodes : 
 
-				- `return true`
+			`AppDelegate.swift:comments`
 
-			- AppDelegate.swift:implementation:properties:window
+			`AppDelegate.swift:imports:importCocoa`
 
-				- `var window: UIWindow?`
+			`AppDelegate.swift:UIApplicationMain`
 
-		- Nodes
+			`AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)`
 
-			- `AppDelegate.swift:comments`
+			`AppDelegate.swift:implementation:properties:window`
 
-			- `AppDelegate.swift:imports:importCocoa`
-
-			- `AppDelegate.swift:UIApplicationMain`
-
-			- `AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)`
-
-			- `AppDelegate.swift:implementation:properties:window`
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?\) -> Bool)
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
+			`AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
 
-			- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+			`AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationWillResignActive(func applicationWillResignActive(_ application: UIApplication\))
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationWillResignActive:comments`
+			`AppDelegate.swift:implementation:methods:applicationWillResignActive:comments`
+
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationDidEnterBackground(func applicationDidEnterBackground(_ application: UIApplication\))
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments`
+			`AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments`
+
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationWillEnterForeground(func applicationWillEnterForeground(_ application: UIApplication\))
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments`
+			`AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments`
+
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationDidBecomeActive(func applicationDidBecomeActive(_ application: UIApplication\))
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments`
+			`AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments`
+
+			
 
 			```
 			AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(_ application: UIApplication\))
 			```
 
-			- `AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
+			`AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
 
-### Targets
+### Targets : 
 
-- SharedSettings
+- SharedSettings : 
 
-	- ASSETCATALOG_COMPILER_APPICON_NAME
+	- `ASSETCATALOG_COMPILER_APPICON_NAME` : `AppIcon`
 
-		- `AppIcon`
+	- `LD_RUNPATH_SEARCH_PATHS` : `$(inherited) @executable_path/Frameworks`
 
-	- LD_RUNPATH_SEARCH_PATHS
+	- `TARGETED_DEVICE_FAMILY` : `1,2`
 
-		- `$(inherited) @executable_path/Frameworks`
-
-	- TARGETED_DEVICE_FAMILY
-
-		- `1,2`
-
-- TargetIdentifier
-
-	- `com.apple.dt.cocoaTouchApplicationTarget`
+- TargetIdentifier : `com.apple.dt.cocoaTouchApplicationTarget`

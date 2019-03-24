@@ -50,8 +50,8 @@ class XcodeTempateInfoArgsHandler: ArgsHandler {
                 continue
             }
 
-            let nsDict = info.plist as NSDictionary
-            print("\(fileName): ", nsDict)
+//            let nsDict = info.plist as NSDictionary
+//            print("\(fileName): ", nsDict)
 
             let content = self.generator.fileContent(for: info, availableAncestorsById: templateInfos)
             output.write(content: content, fileName: fileName)
