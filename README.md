@@ -1,5 +1,5 @@
 # PlistMapper
-CommandLine tool to map plist files to other formats allow better analysis and improves readability
+CommandLine tool to map plist files to other formats allowing better analysis and improves readability
 
 *The inspiration and main application of the tool is mapping the definition of xcode project templates (TemplateInfo.plist files) to analyze how they are built.*
 
