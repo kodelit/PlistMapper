@@ -12,6 +12,6 @@ extension XMind.Node {
 
     /// !!!: Link DEPENDS ON Generate Xcode Template Descritpions
     var link:String {
-        return "file:../\(MarkdownOutput.outputDirName)/\(self.text).\(Markdown.fileExtension)".escapedPath()
+        return "file:" + "../\(MarkdownOutput.outputDirName)/\(self.text).\(Markdown.fileExtension)".escapedPath()
     }
 }
