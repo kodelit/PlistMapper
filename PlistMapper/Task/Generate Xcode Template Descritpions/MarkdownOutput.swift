@@ -1,5 +1,5 @@
 //
-//  MindMapOutput.swift
+//  MarkdownOutput.swift
 //  PlistMapper
 //
 //  Created by Grzegorz on 23/03/2019.
@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct MindMapOutput: OutputType {
-    let rootDir: String
-    let outputDirName = "Mindmaps"
+struct MarkdownOutput: OutputType {
+    static let outputDirName = "Markdowns"
+    static let outputFileExt = Markdown.fileExtension
+    
+    let rootDir:String
 
     init(rootDir:String) {
         self.rootDir = rootDir

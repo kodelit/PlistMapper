@@ -8,27 +8,26 @@
 
 import Foundation
 
-extension Input.Arg {
-    static var xcodeAllTemplates:String { return "--xcode-all-proj-templates" }
-    static var xcodeSelectedTemplate:String { return "--xcode-proj-template" }
-    static var xcodeTemplateInheritanceMap:String { return "--xcode-proj-template-inheritance-map" }
-}
+struct XcodeTemplateInfoMarkdownGenerator: MarkdownGenerator {}
+//struct XcodeTemplateSummaryMarkdownGenerator: MarkdownGenerator {}
 
-class XcodeTempateInfoArgsHandler: ArgsHandler {
+struct GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
     let input:Input
     let parser = XcodeProjectTemplateInfoParser()
-    let generator = XcodeTemplateInfoMarkdownGenerator()
-    let output:MarkdownOutput
+    var generator:TextContentGenerator
+    var output:OutputType
 
     init() {
         let input = Input()
         self.input = input
 
+        self.generator = XcodeTemplateInfoMarkdownGenerator()
+
         let outputDir = input.valueForArg(Input.Arg.outputDir) ?? input.scriptDir
         self.output = MarkdownOutput(rootDir: outputDir)
     }
     
-    func handle() {
+    func start() {
         guard output.reset() else {
             assertionFailure()
             return
@@ -50,29 +49,8 @@ class XcodeTempateInfoArgsHandler: ArgsHandler {
                 continue
             }
 
-//            let nsDict = info.plist as NSDictionary
-//            print("\(fileName): ", nsDict)
-
             let content = self.generator.fileContent(for: info, availableAncestorsById: templateInfos)
             output.write(content: content, fileName: fileName)
         }
-    }
-
-    func allDependenciesById(for templateIdOrName:String) -> [String: TemplateInfo] {
-        let templateInfos:[String: TemplateInfo] = self.parser.itemsById()
-        var result:[String: TemplateInfo] = [:]
-        if let selected = templateInfos[templateIdOrName]
-            ?? templateInfos.first(where: { $0.value.templateName == templateIdOrName })?.value {
-            result[selected.identifier] = selected
-
-            if let ancestors = selected.ancestors() {
-                for ancestor in ancestors {
-                    result.merge(self.allDependenciesById(for: ancestor)) { (old, _) -> TemplateInfo in
-                        return old
-                    }
-                }
-            }
-        }
-        return result
     }
 }

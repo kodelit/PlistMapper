@@ -16,7 +16,7 @@ protocol MarkdownGenerator: TextContentGenerator {}
 
 extension MarkdownGenerator {
 
-    private static var noIndentationLevel:Int { return 3 }
+    static var noIndentationLevel:Int { return 3 }
 
     func rowIndentation(for level:Int) -> String {
         let indent = level > Self.noIndentationLevel ? String(repeating: "\t", count: level - 4) : ""
@@ -119,7 +119,6 @@ extension MarkdownGenerator {
         return "\(self.valueSufixWith(key: key, level: level))`\(String(describing: value))`"
     }
 
-    // MARK: - Main
     func rows(for inputValue:Any, indentationLevel level:Int) -> [String] {
         if let string = inputValue as? String {
             return [self.rowForString(string, indentationLevel: level)]
@@ -133,13 +132,7 @@ extension MarkdownGenerator {
         return [self.rowForUnknown(inputValue, indentationLevel: level)]
     }
 
-    func fileContent(for info:PlistDataType) -> String {
-        return self.fileContent(for: info, availableAncestorsById: nil)
-    }
-
-    private func escaped(path:String) -> String {
-        return path.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed) ?? path
-    }
+    // MARK: - Main
 
     func fileContent(for info:PlistDataType, availableAncestorsById:[String: UniquePlistDataType]?) -> String {
         let name = info.title
@@ -148,8 +141,8 @@ extension MarkdownGenerator {
 
         let fileName = info.sourceFileName() ?? "Plist Content"
         let fileDir = (path as NSString).deletingLastPathComponent as String
-        let escapedFileDir = self.escaped(path: fileDir)
-        let excapedPath = self.escaped(path: path)
+        let escapedFileDir = fileDir.escapedPath()
+        let excapedPath = path.escapedPath()
 
         let isPathSymbolic = fileDir.starts(with: "~")
         let hasPlistIdentifier = info is UniquePlistDataType
@@ -202,9 +195,9 @@ extension MarkdownGenerator {
                     if let ancestorInfo = availableAncestorsById?[identifier],
                         let markdownFileName = ancestorInfo.outputFileName()
                     {
-                        let escapedDescriptionFileName = self.escaped(path: "\(markdownFileName).\(Markdown.fileExtension)")
-                        let escapedFileDir = self.escaped(path: ancestorInfo.sourceDir())
-                        let excapedPath = self.escaped(path: ancestorInfo.path)
+                        let escapedDescriptionFileName = "\(markdownFileName).\(Markdown.fileExtension)".escapedPath()
+                        let escapedFileDir = ancestorInfo.sourceDir().escapedPath()
+                        let excapedPath = ancestorInfo.path.escapedPath()
                         valueRow += " ( [**\(ancestorInfo.title)**](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
                     }
                     content.append(valueRow)

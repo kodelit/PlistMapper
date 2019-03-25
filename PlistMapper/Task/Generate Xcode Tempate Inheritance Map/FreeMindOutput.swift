@@ -1,5 +1,5 @@
 //
-//  MarkdownOutput.swift
+//  FreeMindOutput.swift
 //  PlistMapper
 //
 //  Created by Grzegorz on 23/03/2019.
@@ -8,9 +8,11 @@
 
 import Foundation
 
-struct MarkdownOutput: OutputType {
-    let rootDir:String
-    let outputDirName = "Markdowns"
+struct FreeMindOutput: OutputType {
+    static let outputDirName = "MindMaps"
+    static let outputFileExt = FreeMind.fileExtension
+
+    let rootDir: String
 
     init(rootDir:String) {
         self.rootDir = rootDir

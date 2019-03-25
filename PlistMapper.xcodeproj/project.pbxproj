@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B51E699C2249727D00458781 /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69952249727D00458781 /* Entry.swift */; };
+		B51E699D2249727D00458781 /* Archive+Reading.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69962249727D00458781 /* Archive+Reading.swift */; };
+		B51E699E2249727D00458781 /* Archive+Writing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69972249727D00458781 /* Archive+Writing.swift */; };
+		B51E699F2249727D00458781 /* Data+Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69982249727D00458781 /* Data+Compression.swift */; };
+		B51E69A02249727D00458781 /* Archive.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69992249727D00458781 /* Archive.swift */; };
+		B51E69A12249727D00458781 /* FileManager+ZIP.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E699A2249727D00458781 /* FileManager+ZIP.swift */; };
+		B51E69A22249727D00458781 /* Data+Serialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E699B2249727D00458781 /* Data+Serialization.swift */; };
+		B51E69A4224978A700458781 /* XMindNode+Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = B51E69A3224978A700458781 /* XMindNode+Link.swift */; };
+		B55D8A812248F2A000AA9B87 /* String+Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D8A802248F2A000AA9B87 /* String+Path.swift */; };
+		B55D8A832249041200AA9B87 /* MindMapNodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D8A822249041200AA9B87 /* MindMapNodeType.swift */; };
+		B55D8A8A2249173A00AA9B87 /* XcodeTempateInfoTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D8A892249173A00AA9B87 /* XcodeTempateInfoTask.swift */; };
+		B55D8A8C22491F4200AA9B87 /* XMindOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D8A8B22491F4200AA9B87 /* XMindOutput.swift */; };
+		B55D8A8E22492EDD00AA9B87 /* Date+Timestamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D8A8D22492EDD00AA9B87 /* Date+Timestamp.swift */; };
+		B58476FA2247DA700013B7FC /* FreeMindGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58476F92247DA700013B7FC /* FreeMindGenerator.swift */; };
+		B58476FE22483FD90013B7FC /* XMindGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58476FD22483FD90013B7FC /* XMindGenerator.swift */; };
 		B5AF82122245171B0040AAF4 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF82112245171B0040AAF4 /* main.swift */; };
 		B5AF821A22457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF821922457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift */; };
 		B5AF821C22457FED0040AAF4 /* MarkdownGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF821B22457FED0040AAF4 /* MarkdownGenerator.swift */; };
-		B5AF821E224589330040AAF4 /* XcodeTemplateInfoMarkdownGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF821D224589330040AAF4 /* XcodeTemplateInfoMarkdownGenerator.swift */; };
 		B5AF822322458A170040AAF4 /* PlistDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF822222458A170040AAF4 /* PlistDataType.swift */; };
 		B5AF822522458A2E0040AAF4 /* TemplateInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF822422458A2E0040AAF4 /* TemplateInfo.swift */; };
 		B5AF8227224598870040AAF4 /* PlistParserType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AF8226224598870040AAF4 /* PlistParserType.swift */; };
-		B5BC24F02246A2F00029B219 /* XcodeTempateInfoArgsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24EF2246A2F00029B219 /* XcodeTempateInfoArgsHandler.swift */; };
+		B5BC24F02246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24EF2246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift */; };
 		B5BC24F22246A6710029B219 /* Input.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F12246A6710029B219 /* Input.swift */; };
 		B5BC24F42246A83A0029B219 /* MarkdownOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F32246A83A0029B219 /* MarkdownOutput.swift */; };
-		B5BC24F72246AA6C0029B219 /* ArgsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F62246AA6C0029B219 /* ArgsHandler.swift */; };
-		B5BC24F92246D8AE0029B219 /* XcodeTempateInheritanceMapArgsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F82246D8AE0029B219 /* XcodeTempateInheritanceMapArgsHandler.swift */; };
+		B5BC24F72246AA6C0029B219 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F62246AA6C0029B219 /* Task.swift */; };
+		B5BC24F92246D8AE0029B219 /* GenerateXcodeTempateInheritanceMapTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24F82246D8AE0029B219 /* GenerateXcodeTempateInheritanceMapTask.swift */; };
 		B5BC24FB2246DAAD0029B219 /* TextContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */; };
 		B5BC24FE2246DD430029B219 /* OutputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FD2246DD430029B219 /* OutputType.swift */; };
-		B5BC25002246DD6A0029B219 /* MindMapOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FF2246DD6A0029B219 /* MindMapOutput.swift */; };
+		B5BC25002246DD6A0029B219 /* FreeMindOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FF2246DD6A0029B219 /* FreeMindOutput.swift */; };
+		B5C51CF72248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */; };
+		B5C51CF92248F14100CECEC8 /* UniquePlistDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C51CF82248F14100CECEC8 /* UniquePlistDataType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,24 +53,40 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		B51E69952249727D00458781 /* Entry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		B51E69962249727D00458781 /* Archive+Reading.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Archive+Reading.swift"; sourceTree = "<group>"; };
+		B51E69972249727D00458781 /* Archive+Writing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Archive+Writing.swift"; sourceTree = "<group>"; };
+		B51E69982249727D00458781 /* Data+Compression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Compression.swift"; sourceTree = "<group>"; };
+		B51E69992249727D00458781 /* Archive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Archive.swift; sourceTree = "<group>"; };
+		B51E699A2249727D00458781 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FileManager+ZIP.swift"; sourceTree = "<group>"; };
+		B51E699B2249727D00458781 /* Data+Serialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+Serialization.swift"; sourceTree = "<group>"; };
+		B51E69A3224978A700458781 /* XMindNode+Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XMindNode+Link.swift"; sourceTree = "<group>"; };
 		B52F72EE2246F37000379AC4 /* Output */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Output; sourceTree = "<group>"; };
+		B55D8A802248F2A000AA9B87 /* String+Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Path.swift"; sourceTree = "<group>"; };
+		B55D8A822249041200AA9B87 /* MindMapNodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapNodeType.swift; sourceTree = "<group>"; };
+		B55D8A892249173A00AA9B87 /* XcodeTempateInfoTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeTempateInfoTask.swift; sourceTree = "<group>"; };
+		B55D8A8B22491F4200AA9B87 /* XMindOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMindOutput.swift; sourceTree = "<group>"; };
+		B55D8A8D22492EDD00AA9B87 /* Date+Timestamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Timestamp.swift"; sourceTree = "<group>"; };
 		B58476F82247CFAF0013B7FC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B58476F92247DA700013B7FC /* FreeMindGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMindGenerator.swift; sourceTree = "<group>"; };
+		B58476FD22483FD90013B7FC /* XMindGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMindGenerator.swift; sourceTree = "<group>"; };
 		B5AF820E2245171B0040AAF4 /* PlistMapper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PlistMapper; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5AF82112245171B0040AAF4 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		B5AF821922457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeProjectTemplateInfoParser.swift; sourceTree = "<group>"; };
 		B5AF821B22457FED0040AAF4 /* MarkdownGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownGenerator.swift; sourceTree = "<group>"; };
-		B5AF821D224589330040AAF4 /* XcodeTemplateInfoMarkdownGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeTemplateInfoMarkdownGenerator.swift; sourceTree = "<group>"; };
 		B5AF822222458A170040AAF4 /* PlistDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistDataType.swift; sourceTree = "<group>"; };
 		B5AF822422458A2E0040AAF4 /* TemplateInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateInfo.swift; sourceTree = "<group>"; };
 		B5AF8226224598870040AAF4 /* PlistParserType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistParserType.swift; sourceTree = "<group>"; };
-		B5BC24EF2246A2F00029B219 /* XcodeTempateInfoArgsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeTempateInfoArgsHandler.swift; sourceTree = "<group>"; };
+		B5BC24EF2246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateXcodeTempateDescriptionTask.swift; sourceTree = "<group>"; };
 		B5BC24F12246A6710029B219 /* Input.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Input.swift; sourceTree = "<group>"; };
 		B5BC24F32246A83A0029B219 /* MarkdownOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownOutput.swift; sourceTree = "<group>"; };
-		B5BC24F62246AA6C0029B219 /* ArgsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArgsHandler.swift; sourceTree = "<group>"; };
-		B5BC24F82246D8AE0029B219 /* XcodeTempateInheritanceMapArgsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeTempateInheritanceMapArgsHandler.swift; sourceTree = "<group>"; };
+		B5BC24F62246AA6C0029B219 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
+		B5BC24F82246D8AE0029B219 /* GenerateXcodeTempateInheritanceMapTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateXcodeTempateInheritanceMapTask.swift; sourceTree = "<group>"; };
 		B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentGenerator.swift; sourceTree = "<group>"; };
 		B5BC24FD2246DD430029B219 /* OutputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputType.swift; sourceTree = "<group>"; };
-		B5BC24FF2246DD6A0029B219 /* MindMapOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindMapOutput.swift; sourceTree = "<group>"; };
+		B5BC24FF2246DD6A0029B219 /* FreeMindOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMindOutput.swift; sourceTree = "<group>"; };
+		B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySummaryMarkdownGenerator.swift; sourceTree = "<group>"; };
+		B5C51CF82248F14100CECEC8 /* UniquePlistDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquePlistDataType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +100,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B51E69802249723B00458781 /* ZIPFoundation-0.9.8 */ = {
+			isa = PBXGroup;
+			children = (
+				B51E69992249727D00458781 /* Archive.swift */,
+				B51E69962249727D00458781 /* Archive+Reading.swift */,
+				B51E69972249727D00458781 /* Archive+Writing.swift */,
+				B51E69982249727D00458781 /* Data+Compression.swift */,
+				B51E699B2249727D00458781 /* Data+Serialization.swift */,
+				B51E69952249727D00458781 /* Entry.swift */,
+				B51E699A2249727D00458781 /* FileManager+ZIP.swift */,
+			);
+			path = "ZIPFoundation-0.9.8";
+			sourceTree = "<group>";
+		};
+		B55D8A7A2248F1A700AA9B87 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				B55D8A7D2248F1E100AA9B87 /* Data Model */,
+				B5BC24F62246AA6C0029B219 /* Task.swift */,
+				B5BC24F12246A6710029B219 /* Input.swift */,
+				B5AF8226224598870040AAF4 /* PlistParserType.swift */,
+				B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */,
+				B5BC24FD2246DD430029B219 /* OutputType.swift */,
+				B55D8A802248F2A000AA9B87 /* String+Path.swift */,
+				B55D8A8D22492EDD00AA9B87 /* Date+Timestamp.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		B55D8A7D2248F1E100AA9B87 /* Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				B5AF822222458A170040AAF4 /* PlistDataType.swift */,
+				B5C51CF82248F14100CECEC8 /* UniquePlistDataType.swift */,
+				B55D8A822249041200AA9B87 /* MindMapNodeType.swift */,
+			);
+			path = "Data Model";
+			sourceTree = "<group>";
+		};
+		B55D8A85224915C600AA9B87 /* Generate Xcode Template Descritpions */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC24EF2246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift */,
+				B5AF821B22457FED0040AAF4 /* MarkdownGenerator.swift */,
+				B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */,
+				B5BC24F32246A83A0029B219 /* MarkdownOutput.swift */,
+			);
+			path = "Generate Xcode Template Descritpions";
+			sourceTree = "<group>";
+		};
+		B55D8A862249160100AA9B87 /* Generate Xcode Tempate Inheritance Map */ = {
+			isa = PBXGroup;
+			children = (
+				B5BC24F82246D8AE0029B219 /* GenerateXcodeTempateInheritanceMapTask.swift */,
+				B58476FD22483FD90013B7FC /* XMindGenerator.swift */,
+				B55D8A8B22491F4200AA9B87 /* XMindOutput.swift */,
+				B58476F92247DA700013B7FC /* FreeMindGenerator.swift */,
+				B5BC24FF2246DD6A0029B219 /* FreeMindOutput.swift */,
+			);
+			path = "Generate Xcode Tempate Inheritance Map";
+			sourceTree = "<group>";
+		};
+		B55D8A882249172100AA9B87 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				B55D8A892249173A00AA9B87 /* XcodeTempateInfoTask.swift */,
+				B51E69A3224978A700458781 /* XMindNode+Link.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		B55D8AEF224940D100AA9B87 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				B51E69802249723B00458781 /* ZIPFoundation-0.9.8 */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
 		B5AF82052245171B0040AAF4 = {
 			isa = PBXGroup;
 			children = (
@@ -89,63 +200,32 @@
 		B5AF82102245171B0040AAF4 /* PlistMapper */ = {
 			isa = PBXGroup;
 			children = (
-				B5BC24F52246AA420029B219 /* Input */,
-				B5BC24FC2246DD370029B219 /* Output */,
+				B55D8AEF224940D100AA9B87 /* Libs */,
+				B55D8A7A2248F1A700AA9B87 /* Core */,
 				B5AF822122458A060040AAF4 /* Data Model */,
-				B5AF82202245895E0040AAF4 /* Parser */,
-				B5AF821F2245894D0040AAF4 /* Generator */,
+				B5BC24F52246AA420029B219 /* Task */,
 				B5AF82112245171B0040AAF4 /* main.swift */,
 			);
 			path = PlistMapper;
 			sourceTree = "<group>";
 		};
-		B5AF821F2245894D0040AAF4 /* Generator */ = {
-			isa = PBXGroup;
-			children = (
-				B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */,
-				B5AF821B22457FED0040AAF4 /* MarkdownGenerator.swift */,
-				B5AF821D224589330040AAF4 /* XcodeTemplateInfoMarkdownGenerator.swift */,
-			);
-			path = Generator;
-			sourceTree = "<group>";
-		};
-		B5AF82202245895E0040AAF4 /* Parser */ = {
-			isa = PBXGroup;
-			children = (
-				B5AF8226224598870040AAF4 /* PlistParserType.swift */,
-				B5AF821922457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift */,
-			);
-			path = Parser;
-			sourceTree = "<group>";
-		};
 		B5AF822122458A060040AAF4 /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				B5AF822222458A170040AAF4 /* PlistDataType.swift */,
 				B5AF822422458A2E0040AAF4 /* TemplateInfo.swift */,
+				B5AF821922457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift */,
 			);
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
-		B5BC24F52246AA420029B219 /* Input */ = {
+		B5BC24F52246AA420029B219 /* Task */ = {
 			isa = PBXGroup;
 			children = (
-				B5BC24F12246A6710029B219 /* Input.swift */,
-				B5BC24F62246AA6C0029B219 /* ArgsHandler.swift */,
-				B5BC24EF2246A2F00029B219 /* XcodeTempateInfoArgsHandler.swift */,
-				B5BC24F82246D8AE0029B219 /* XcodeTempateInheritanceMapArgsHandler.swift */,
+				B55D8A882249172100AA9B87 /* Common */,
+				B55D8A85224915C600AA9B87 /* Generate Xcode Template Descritpions */,
+				B55D8A862249160100AA9B87 /* Generate Xcode Tempate Inheritance Map */,
 			);
-			path = Input;
-			sourceTree = "<group>";
-		};
-		B5BC24FC2246DD370029B219 /* Output */ = {
-			isa = PBXGroup;
-			children = (
-				B5BC24FD2246DD430029B219 /* OutputType.swift */,
-				B5BC24F32246A83A0029B219 /* MarkdownOutput.swift */,
-				B5BC24FF2246DD6A0029B219 /* MindMapOutput.swift */,
-			);
-			path = Output;
+			path = Task;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +269,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = B5AF82052245171B0040AAF4;
 			productRefGroup = B5AF820F2245171B0040AAF4 /* Products */;
@@ -205,21 +286,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B51E699C2249727D00458781 /* Entry.swift in Sources */,
+				B51E699D2249727D00458781 /* Archive+Reading.swift in Sources */,
+				B55D8A832249041200AA9B87 /* MindMapNodeType.swift in Sources */,
+				B55D8A8A2249173A00AA9B87 /* XcodeTempateInfoTask.swift in Sources */,
+				B51E699F2249727D00458781 /* Data+Compression.swift in Sources */,
 				B5BC24FB2246DAAD0029B219 /* TextContentGenerator.swift in Sources */,
-				B5BC24F92246D8AE0029B219 /* XcodeTempateInheritanceMapArgsHandler.swift in Sources */,
+				B51E69A02249727D00458781 /* Archive.swift in Sources */,
+				B5BC24F92246D8AE0029B219 /* GenerateXcodeTempateInheritanceMapTask.swift in Sources */,
+				B51E69A4224978A700458781 /* XMindNode+Link.swift in Sources */,
 				B5BC24F42246A83A0029B219 /* MarkdownOutput.swift in Sources */,
 				B5BC24F22246A6710029B219 /* Input.swift in Sources */,
 				B5BC24FE2246DD430029B219 /* OutputType.swift in Sources */,
-				B5BC25002246DD6A0029B219 /* MindMapOutput.swift in Sources */,
-				B5AF821E224589330040AAF4 /* XcodeTemplateInfoMarkdownGenerator.swift in Sources */,
+				B5BC25002246DD6A0029B219 /* FreeMindOutput.swift in Sources */,
 				B5AF822522458A2E0040AAF4 /* TemplateInfo.swift in Sources */,
-				B5BC24F02246A2F00029B219 /* XcodeTempateInfoArgsHandler.swift in Sources */,
+				B5BC24F02246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift in Sources */,
 				B5AF821A22457E7B0040AAF4 /* XcodeProjectTemplateInfoParser.swift in Sources */,
 				B5AF822322458A170040AAF4 /* PlistDataType.swift in Sources */,
-				B5BC24F72246AA6C0029B219 /* ArgsHandler.swift in Sources */,
+				B51E69A22249727D00458781 /* Data+Serialization.swift in Sources */,
+				B5C51CF92248F14100CECEC8 /* UniquePlistDataType.swift in Sources */,
+				B55D8A8C22491F4200AA9B87 /* XMindOutput.swift in Sources */,
+				B51E69A12249727D00458781 /* FileManager+ZIP.swift in Sources */,
+				B5BC24F72246AA6C0029B219 /* Task.swift in Sources */,
 				B5AF821C22457FED0040AAF4 /* MarkdownGenerator.swift in Sources */,
 				B5AF82122245171B0040AAF4 /* main.swift in Sources */,
+				B55D8A8E22492EDD00AA9B87 /* Date+Timestamp.swift in Sources */,
+				B58476FE22483FD90013B7FC /* XMindGenerator.swift in Sources */,
+				B51E699E2249727D00458781 /* Archive+Writing.swift in Sources */,
+				B55D8A812248F2A000AA9B87 /* String+Path.swift in Sources */,
+				B58476FA2247DA700013B7FC /* FreeMindGenerator.swift in Sources */,
 				B5AF8227224598870040AAF4 /* PlistParserType.swift in Sources */,
+				B5C51CF72248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,12 @@
 import Foundation
 
 protocol TextContentGenerator {
-    func rows(for value:Any, indentationLevel:Int) -> [String]
-    func fileContent(for info:PlistDataType) -> String
     func fileContent(for info:PlistDataType, availableAncestorsById:[String: UniquePlistDataType]?) -> String
+    func rowIndentation(for level:Int) -> String
+}
+
+extension TextContentGenerator {
+    func rowIndentation(for level:Int) -> String {
+        return String(repeating: "\t", count: level)
+    }
 }

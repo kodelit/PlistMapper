@@ -36,20 +36,11 @@ guard CommandLine.arguments.count > 1 else {
     exit(EXIT_FAILURE)
 }
 
-//let arguments = CommandLine.arguments
-//let scriptPath = arguments.first!
-//
-//var dirUrl = URL(string: scriptPath)!
-//dirUrl.deleteLastPathComponent()
-//let outputRootDir = dirUrl.absoluteString
-
-//let markdownOutput = MarkdownOutput(rootDir: outputRootDir)
-let handlers:[ArgsHandler] = [XcodeTempateInfoArgsHandler()]
-//let markdownsDir = markdownOutput.outputDir
+let handlers:[Task] = [GenerateXcodeTempateDescriptionTask(),
+                       GenerateXcodeTempateInheritanceMapTask()]
 
 // MARK: - Main
 
 for handler in handlers {
-    handler.handle()
+    handler.start()
 }
-

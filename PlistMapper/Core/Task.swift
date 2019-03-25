@@ -1,5 +1,5 @@
 //
-//  ArgsHandler.swift
+//  Task.swift
 //  PlistMapper
 //
 //  Created by Grzegorz on 23/03/2019.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol ArgsHandler {
-    func handle()
+protocol Task {
+    func start()
 }
