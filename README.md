@@ -23,7 +23,8 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 			xmind mind map contains links to descriptions for every template
 			
 		![Xmind](Docs/thumbnail.png)
-	
+	- [x] xdoce tempates full maps
+		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name Full Map.xmind`**)  
 	- [ ] other cases
 
 ### Arguments
@@ -31,13 +32,7 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 	
 	allows to provide custom output dir, default is the script directory
 
-- `--xcode-all-proj-templates`
-	
-	makes the tool generate markdown files describing all known project templates
-	> check argumetnts of scheme `XcodeAllTemplatesMapping` for example
-
 - `--xcode-proj-template <template_identifier>|<template name>`
-	
 
 	makes the tool generate markdown files describing:
 	
@@ -46,10 +41,14 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 
 	and mind map file to visualise:
 	
-	- whole inheritance tree of selected template
+	- whole tree of selected template
+	- inheritance tree of selected template (simplified with only templates names)
 
-	> check argumetnts of scheme `XcodeTemplateAncestorsMapping` for example
+	**If this argument is not defined there will be descriptions generated for every known template, but without mind maps.**
+	
+	Check argumetnts of scheme `XcodeTemplateAncestorsMapping` for example
 
+---
 
 There are several schemes in xcode project, which are providing example of using arguments of the script in section `Run/Arguments` of the scheme settings
 
