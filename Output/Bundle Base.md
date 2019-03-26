@@ -16,22 +16,24 @@
 
 ### Nodes : 
 
-`Info.plist:Identifier`
+- 0 : `Info.plist:Identifier`
 
-`Info.plist:PlistVersion`
+- 1 : `Info.plist:PlistVersion`
 
-`Info.plist:Executable`
+- 2 : `Info.plist:Executable`
 
-`Info.plist:BundleName`
+- 3 : `Info.plist:BundleName`
 
-`Info.plist:DevelopmentRegion`
+- 4 : `Info.plist:DevelopmentRegion`
 
-`Info.plist:ProductVersion`
+- 5 : `Info.plist:ProductVersion`
 
 ### Targets : 
 
-- SharedSettings : 
+- 0 : 
 
-	- `INFOPLIST_FILE` : `___PACKAGENAME___/Info.plist`
+	- SharedSettings : 
 
-	- `PRODUCT_BUNDLE_IDENTIFIER` : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`
+		- `INFOPLIST_FILE` : `___PACKAGENAME___/Info.plist`
+
+		- `PRODUCT_BUNDLE_IDENTIFIER` : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`

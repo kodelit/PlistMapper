@@ -13,18 +13,17 @@ struct Input {
         static let outputDir:String = "--output"
     }
 
-    let arguments = CommandLine.arguments
-    var scriptPath:String { return arguments.first! }
+    static var scriptPath:String { return CommandLine.arguments.first! }
 
-    var scriptDir:String {
-        let scriptPath = self.arguments.first!
+    static var scriptDir:String {
+        let scriptPath = CommandLine.arguments.first!
         var dirUrl = URL(string: scriptPath)!
         dirUrl.deleteLastPathComponent()
         let scriptDir = dirUrl.absoluteString
         return scriptDir
     }
 
-    func boolForArg(_ name:String) -> Bool {
+    static func boolForArg(_ name:String) -> Bool {
         if let value = self.valueForArg(name) {
             switch value.lowercased() {
             case "false", "no", "0":
@@ -33,12 +32,12 @@ struct Input {
                 return true
             }
         }
-        let isDefined = self.arguments.contains(name)
+        let isDefined = CommandLine.arguments.contains(name)
         return isDefined
     }
 
-    func valueForArg(_ name:String) -> String? {
-        let arguments = self.arguments
+    static func valueForArg(_ name:String) -> String? {
+        let arguments = CommandLine.arguments
         if let index = arguments.firstIndex(of: name),
             arguments.count > index + 1 {
             let value = arguments[index + 1]

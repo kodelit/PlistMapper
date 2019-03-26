@@ -9,12 +9,6 @@
 import Foundation
 
 struct MarkdownOutput: OutputType {
-    static let outputDirName = "Markdowns"
+    static let outputDirName = ""
     static let outputFileExt = Markdown.fileExtension
-    
-    let rootDir:String
-
-    init(rootDir:String) {
-        self.rootDir = rootDir
-    }
 }

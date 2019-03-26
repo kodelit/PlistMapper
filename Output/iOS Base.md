@@ -16,7 +16,7 @@
 
 ### Platforms : 
 
-`com.apple.platform.iphoneos`
+- 0 : `com.apple.platform.iphoneos`
 
 ### Project : 
 
@@ -36,6 +36,8 @@
 
 ### Targets : 
 
-- SharedSettings : 
+- 0 : 
 
-	- `TARGETED_DEVICE_FAMILY` : `1,2`
+	- SharedSettings : 
+
+		- `TARGETED_DEVICE_FAMILY` : `1,2`

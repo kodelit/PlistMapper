@@ -12,35 +12,39 @@
 
 ### Options : 
 
-- Identifier : `languageChoice`
+- 0 : 
 
-- Units : 
+	- Identifier : `languageChoice`
 
-	- Swift : 
+	- Units : 
 
-		- Project : 
+		- Swift : 
 
-			- Configurations : 
+			- Project : 
 
-				- Debug : 
+				- Configurations : 
 
-					- `SWIFT_ACTIVE_COMPILATION_CONDITIONS` : `DEBUG`
+					- Debug : 
 
-					- `SWIFT_OPTIMIZATION_LEVEL` : `-Onone`
+						- `SWIFT_ACTIVE_COMPILATION_CONDITIONS` : `DEBUG`
 
-				- Release : 
+						- `SWIFT_OPTIMIZATION_LEVEL` : `-Onone`
 
-					- `SWIFT_COMPILATION_MODE` : `wholemodule`
+					- Release : 
 
-					- `SWIFT_OPTIMIZATION_LEVEL` : `-O`
+						- `SWIFT_COMPILATION_MODE` : `wholemodule`
 
-		- Targets : 
+						- `SWIFT_OPTIMIZATION_LEVEL` : `-O`
 
-			- Concrete : `NO`
+			- Targets : 
 
-			- SharedSettings : 
+				- 0 : 
 
-				- `SWIFT_VERSION` : `4.2`
+					- Concrete : `NO`
+
+					- SharedSettings : 
+
+						- `SWIFT_VERSION` : `5.0`
 
 ### Project : 
 
@@ -154,16 +158,18 @@
 
 ### Targets : 
 
-- Concrete : `NO`
+- 0 : 
 
-- Configurations : 
+	- Concrete : `NO`
 
-	- Debug : 
+	- Configurations : 
 
-	- Release : 
+		- Debug : 
 
-- Name : `___PACKAGENAME___`
+		- Release : 
 
-- SharedSettings : 
+	- Name : `___PACKAGENAME___`
 
-	- `PRODUCT_NAME` : `$(TARGET_NAME)`
+	- SharedSettings : 
+
+		- `PRODUCT_NAME` : `$(TARGET_NAME)`

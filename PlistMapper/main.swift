@@ -41,6 +41,10 @@ let handlers:[Task] = [GenerateXcodeTempateDescriptionTask(),
 
 // MARK: - Main
 
+guard Output.reset() else {
+    exit(EXIT_FAILURE)
+}
+
 for handler in handlers {
     handler.start()
 }

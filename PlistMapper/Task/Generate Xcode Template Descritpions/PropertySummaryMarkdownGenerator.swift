@@ -16,6 +16,32 @@ protocol PropertySummaryMarkdownGenerator: MarkdownGenerator {
 }
 
 extension PropertySummaryMarkdownGenerator {
+
+    func rowsForDictionary(_ dict:[String: Any], indentationLevel level:Int) -> [String] {
+        let keys = Array(dict.keys).sorted()
+        var result:[String] = []
+        for key in keys {
+            if let value = dict[key] {
+                let valueRows:[String]
+                if let string = value as? String {
+                    valueRows = [self.rowForString(string, key:key, indentationLevel: level)]
+                }else if let bool = value as? Bool {
+                    valueRows = [self.rowForBool(bool, key:key, indentationLevel: level)]
+                }else if let number = value as? NSNumber {
+                    valueRows = [self.rowForNumber(number, key:key, indentationLevel: level)]
+                }else{
+                    let keyRow = self.rowForKey(key, indentationLevel: level)
+                    result.append(keyRow)
+
+                    valueRows = self.rows(for: value, indentationLevel: level + 1)
+                }
+                result.append(contentsOf: valueRows)
+            }
+
+        }
+        return result
+    }
+
     func fileContent(for info:PlistDataType, availableAncestorsById:[String: UniquePlistDataType]?) -> String {
         let name = info.title
         let path = info.path

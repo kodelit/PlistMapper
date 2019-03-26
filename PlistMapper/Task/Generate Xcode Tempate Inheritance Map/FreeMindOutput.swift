@@ -9,12 +9,6 @@
 import Foundation
 
 struct FreeMindOutput: OutputType {
-    static let outputDirName = "MindMaps"
+    static let outputDirName = ""
     static let outputFileExt = FreeMind.fileExtension
-
-    let rootDir: String
-
-    init(rootDir:String) {
-        self.rootDir = rootDir
-    }
 }

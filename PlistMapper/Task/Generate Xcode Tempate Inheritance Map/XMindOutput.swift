@@ -15,7 +15,7 @@ private struct XMindSubfileInfo {
 }
 
 struct XMindOutput: OutputType {
-    static let outputDirName = "MindMaps"
+    static let outputDirName = ""
     static let outputFileExt = XMind.fileExtension
 
     fileprivate static let xmindSubfiles =
@@ -23,16 +23,10 @@ struct XMindOutput: OutputType {
          XMindSubfileInfo(fileName: "manifest.xml", subDir: "META-INF", content:XMindOutput.manifestFileContent),
          XMindSubfileInfo(fileName: "styles.xml", subDir: "", content:XMindOutput.stylesFileContent)]
 
-    let rootDir: String
-
-    init(rootDir:String) {
-        self.rootDir = rootDir
-    }
-
     func write(content:String, fileName:String) {
         let tempDir = NSTemporaryDirectory() + "PlistMapper/"
-        _ = self.reset(dir: tempDir)
-        _ = self.reset(dir: tempDir + "META-INF/")
+        _ = Output.reset(dir: tempDir)
+        _ = Output.reset(dir: tempDir + "META-INF/")
 
         let fileManager = FileManager.default
 
@@ -73,7 +67,7 @@ struct XMindOutput: OutputType {
         }
 
         let tempResultFilePath = archiveURL.path
-        let filePath = path(for: outputRelativePath(for: fileName))
+        let filePath = outputFilePath(for: fileName)
         do{
             if fileManager.fileExists(atPath: tempResultFilePath) {
                 if fileManager.fileExists(atPath: filePath) {
@@ -90,7 +84,7 @@ struct XMindOutput: OutputType {
         }
 
         // cleanup
-        _ = self.reset(dir: tempDir)
+        _ = Output.reset(dir: tempDir)
     }
 }
 

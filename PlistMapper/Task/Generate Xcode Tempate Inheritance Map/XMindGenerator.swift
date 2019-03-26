@@ -133,8 +133,9 @@ struct XMindGenerator: TextContentGenerator {
             case Token.id:
                 value = node.id
             case Token.linkAttribute:
-                // !!!: CODE DEPENDS ON Generate Xcode Template Descritpions
-                value = Template.linkAttribute.replacingOccurrences(of: Token.link, with: node.link)
+                if let link = node.link {
+                    value = Template.linkAttribute.replacingOccurrences(of: Token.link, with: link)
+                }
             case Token.structureClassAttribute:
                 value = structureClassAttribute
             case Token.timeStamp:

@@ -36,7 +36,6 @@
 		B5BC24FB2246DAAD0029B219 /* TextContentGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */; };
 		B5BC24FE2246DD430029B219 /* OutputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FD2246DD430029B219 /* OutputType.swift */; };
 		B5BC25002246DD6A0029B219 /* FreeMindOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BC24FF2246DD6A0029B219 /* FreeMindOutput.swift */; };
-		B5C51CF72248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */; };
 		B5C51CF92248F14100CECEC8 /* UniquePlistDataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5C51CF82248F14100CECEC8 /* UniquePlistDataType.swift */; };
 /* End PBXBuildFile section */
 
@@ -316,7 +315,6 @@
 				B55D8A812248F2A000AA9B87 /* String+Path.swift in Sources */,
 				B58476FA2247DA700013B7FC /* FreeMindGenerator.swift in Sources */,
 				B5AF8227224598870040AAF4 /* PlistParserType.swift in Sources */,
-				B5C51CF72248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +379,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -435,6 +434,7 @@
 				SDKROOT = macosx;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
@@ -444,7 +444,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q58JJ9J34;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -454,7 +453,6 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2Q58JJ9J34;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

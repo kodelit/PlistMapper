@@ -99,18 +99,25 @@ extension MarkdownGenerator {
         return result
     }
 
-    func rowsForArray(_ array:[Any], key:String? = nil, indentationLevel level:Int) -> [String] {
-        let rows:[String]
+    func rowsForArray(_ array:[Any], indentationLevel level:Int) -> [String] {
+        var rows:[String] = []
         if let list = array as? [String] {
-            rows = list.reduce(into: [String]()) { (result, value) in
-                let text = self.rowForString(value, key: nil, indentationLevel: level)
-                result.append(text)
+            for (index, value) in list.enumerated() {
+                let text = self.rowForString(value, key: "\(index)", indentationLevel: level)
+                rows.append(text)
             }
         }else{
-            rows = array.reduce(into: [String]()) { (result, value) in
-                let subrows = self.rows(for: value, indentationLevel: level)
-                result.append(contentsOf: subrows)
+            for (index, value) in array.enumerated() {
+                let keyRow = self.rowForKey("\(index)", indentationLevel: level)
+                rows.append(keyRow)
+
+                let subrows = self.rows(for: value, indentationLevel: level + 1)
+                rows.append(contentsOf: subrows)
             }
+//            rows = array.reduce(into: [String]()) { (result, value) in
+//                let subrows = self.rows(for: value, indentationLevel: level)
+//                result.append(contentsOf: subrows)
+//            }
         }
         return rows
     }

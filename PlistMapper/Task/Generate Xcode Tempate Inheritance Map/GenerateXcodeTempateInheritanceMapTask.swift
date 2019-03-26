@@ -9,31 +9,19 @@
 import Foundation
 
 struct GenerateXcodeTempateInheritanceMapTask: XcodeTempateInfoTask {
-    let input:Input
     let parser = XcodeProjectTemplateInfoParser()
     var generators:[TextContentGenerator]
     var outputs:[OutputType]
 
     init() {
-        let input = Input()
-        self.input = input
-
         self.generators = [XMindGenerator(), FreeMindGenerator()]
-
-        let outputDir = input.valueForArg(Input.Arg.outputDir) ?? input.scriptDir
-        self.outputs = [XMindOutput(rootDir: outputDir), FreeMindOutput(rootDir: outputDir)]
+        self.outputs = [XMindOutput(), FreeMindOutput()]
     }
 
     func start() {
-        guard let output = self.outputs.first, output.reset() else {
-            assertionFailure()
-            return
-        }
+        let shouldGenerateMindMap = Input.boolForArg(Input.Arg.xcodeSelectedTemplate)
 
-
-        let shouldGenerateMindMap = self.input.boolForArg(Input.Arg.xcodeSelectedTemplate)
-
-        if shouldGenerateMindMap, let selectedTemplate = self.input.valueForArg(Input.Arg.xcodeSelectedTemplate) {
+        if shouldGenerateMindMap, let selectedTemplate = Input.valueForArg(Input.Arg.xcodeSelectedTemplate) {
             let templatesById = self.allDependenciesById(for: selectedTemplate)
 
             if let info = self.templateInfo(for: selectedTemplate, availableTemplatesById: templatesById),

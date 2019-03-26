@@ -38,36 +38,46 @@
 
 ### Nodes : 
 
-`Info.plist:PackageType`
+- 0 : `Info.plist:PackageType`
 
 ### Options : 
 
-- Identifier : `languageChoice`
+- 0 : 
 
-- Units : 
+	- Identifier : `languageChoice`
 
-	- Swift : 
+	- Units : 
 
-		- Definitions : 
+		- Swift : 
 
-			- `main.swift` : 
+			- Definitions : 
 
-				- SortOrder : `999`
+				- `main.swift` : 
 
-			- `main.swift:main` : 
+					- SortOrder : `999`
 
-				- Beginning : ``
+				- `main.swift:main` : 
 
-				- End : ``
+					- Beginning : ``
+
+					- End : ``
 
 ### Targets : 
 
-- BuildPhases : 
+- 0 : 
 
-	- Class : `Sources`
+	- BuildPhases : 
 
-	- Class : `Frameworks`
+		- 0 : 
 
-	- Class : `Resources`
+			- Class : `Sources`
 
-- ProductType : `com.apple.product-type.application`
+		- 1 : 
+
+			- Class : `Frameworks`
+
+		- 2 : 
+
+			- Class : `Resources`
+
+	- ProductType : `com.apple.product-type.application`
