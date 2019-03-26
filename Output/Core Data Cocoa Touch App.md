@@ -52,8 +52,12 @@
 
 				- Definitions : 
 
-					- `*:importCoreData` : `#import <CoreData/CoreData.h>
-`
+					- `*:importCoreData` : 
+
+					```
+					#import <CoreData/CoreData.h>
+					
+					```
 
 					- `AppDelegate.h:interface:coreData` : 
 

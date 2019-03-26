@@ -55,7 +55,7 @@ extension MarkdownGenerator {
     func rowForString(_ value:String, key:String? = nil, indentationLevel level:Int = noIndentationLevel) -> String {
         let rowIndentation = self.rowIndentation(for: level)
         let valueSufix = self.valueSufixWith(key: key, level: level)
-        let hasMultipleLines = value.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines).contains("\n")
+        let hasMultipleLines = value.contains("\n")
         let isTooLong = value.count > 100
         let multilineSufix = key != nil ? valueSufix : rowIndentation
         if hasMultipleLines || isTooLong {

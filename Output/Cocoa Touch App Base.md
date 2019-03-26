@@ -212,8 +212,12 @@
 				// Do any additional setup after loading the view.
 				```
 
-				- `AppDelegate.h:interface:window` : `@property (strong, nonatomic) UIWindow *window;
-`
+				- `AppDelegate.h:interface:window` : 
+
+				```
+				@property (strong, nonatomic) UIWindow *window;
+				
+				```
 
 				- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
 

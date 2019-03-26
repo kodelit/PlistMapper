@@ -36,8 +36,11 @@ guard CommandLine.arguments.count > 1 else {
     exit(EXIT_FAILURE)
 }
 
-let handlers:[Task] = [GenerateXcodeTempateDescriptionTask(),
-                       GenerateXcodeTempateInheritanceMapTask()]
+let parser = XcodeProjectTemplateInfoParser()
+
+let handlers:[Task] = [GenerateXcodeTempateDescriptionTask(parser: parser),
+                       GenerateXcodeTempateInheritanceMapTask(parser: parser),
+                       GenerateXcodeTempateFullMapTask(parser: parser)]
 
 // MARK: - Main
 

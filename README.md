@@ -18,8 +18,8 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 		
 - [x] mindmap (freemind format) - visualize inheritance of plists:
 	- [x]  xcode templates inheritance mind maps
-		- [x] FreeMind format (`TemplateInfo.plist` -> **`<output>/Template Name.mm`**)
-		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name.xmind`**)  
+		- [x] FreeMind format (`TemplateInfo.plist` -> **`<output>/Template Name Inheritance Map.mm`**)
+		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name Inheritance Map.xmind`**)  
 			xmind mind map contains links to descriptions for every template
 			
 		![Xmind](Docs/thumbnail.png)

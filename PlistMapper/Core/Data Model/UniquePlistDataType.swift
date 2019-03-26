@@ -12,11 +12,12 @@ protocol UniquePlistDataType: PlistDataType {
     static var identifierKey:String { get }
     static var ancestorsKey:String? { get }
     var identifier:String { get }
-    func ancestors() -> [String]?
+
+    func ancestorsIds() -> [String]?
 }
 
 extension UniquePlistDataType {
-    func ancestors() -> [String]? {
+    func ancestorsIds() -> [String]? {
         if let ancestorsKey = type(of:self).ancestorsKey,
             let ancestors = self.plist[ancestorsKey] as? [String] {
             return ancestors

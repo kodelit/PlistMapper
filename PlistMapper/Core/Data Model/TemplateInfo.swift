@@ -22,6 +22,7 @@ struct TemplateInfo: UniquePlistDataType {
     var path:String
     var plist:[String:Any]
 
+    var ancestors: [TemplateInfo]? = nil
 
     // MARK: - Init
     init?(path:String, plist:[String:Any]) {
@@ -56,3 +57,4 @@ struct TemplateInfo: UniquePlistDataType {
         return title
     }
 }
+

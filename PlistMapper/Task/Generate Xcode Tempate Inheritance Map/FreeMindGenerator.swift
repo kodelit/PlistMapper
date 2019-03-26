@@ -16,7 +16,7 @@ struct FreeMind {
     }
 
     struct Node: MindMapNodeType {
-        let id:String
+        let id:String = UUID().uuidString
         let text:String
         let created:Date
         var modified:Date = Date()
@@ -29,8 +29,7 @@ struct FreeMind {
             return link?.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlPathAllowed) ?? link
         }
 
-        init(id: String, created: Date = Date(), modified: Date = Date(), text: String, link:String? = nil, position: Position = .right, children:[Node] = []) {
-            self.id = id
+        init(text: String, created: Date = Date(), modified: Date = Date(), link:String? = nil, position: Position = .right, children:[Node] = []) {
             self.created = created
             self.modified = modified
             self.link = link
@@ -39,17 +38,16 @@ struct FreeMind {
             self.children = children
         }
 
-        init(with info:UniquePlistDataType) {
-            self.id = info.identifier
+        init(with info:UniquePlistDataType, fullMap:Bool = false) {
             self.text = info.title
             self.created = Date()
         }
 
-        init(with info: UniquePlistDataType, ancestorsById: [String : UniquePlistDataType]?) {
-            self.init(with: info)
+        init(with info: UniquePlistDataType, ancestorsById: [String : UniquePlistDataType]?, fullMap:Bool = false) {
+            self.init(with: info, fullMap: fullMap)
 
             if ancestorsById != nil {
-                let ancestors = self.ancestorNodes(with: info, availableAncestorsById: ancestorsById!)
+                let ancestors = self.ancestorNodes(with: info, availableAncestorsById: ancestorsById!, fullMap: fullMap)
                 let children = self.children + ancestors
                 self.children = children
             }

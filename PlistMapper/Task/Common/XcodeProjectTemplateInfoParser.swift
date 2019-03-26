@@ -23,9 +23,12 @@ struct XcodeProjectTemplateInfoParser: PlistParserType {
         ]
     }()
 
+    var customTemplatePaths:String? = nil
+
     private(set) var items:[Item] = []
 
-    init() {
+    init(for customTemplatePaths:String? = nil) {
+        self.customTemplatePaths = customTemplatePaths
         self.reload()
     }
 
@@ -37,13 +40,17 @@ struct XcodeProjectTemplateInfoParser: PlistParserType {
                 let path = (directory as NSString).resolvingSymlinksInPath as String
 
                 let files = try FileManager.default.subpathsOfDirectory(atPath: path)
-                let plistFiles = files
+                var plistFiles = files
                     .filter( { (path:String) -> Bool in
                         return path.hasSuffix(".\(Plist.fileExtension)")
                     })
                     .map( { (path:String) -> String in
                         return "\(directory)\(path)"
                     })
+
+                if let customPath = self.customTemplatePaths {
+                    plistFiles.append(customPath)
+                }
 
 //                print(" All:",files)
 //                print(" Plists:",plistFiles)

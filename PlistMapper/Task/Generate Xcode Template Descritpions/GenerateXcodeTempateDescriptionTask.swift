@@ -8,29 +8,26 @@
 
 import Foundation
 
-struct XcodeTemplateInfoMarkdownGenerator: MarkdownGenerator {}
-//struct XcodeTemplateSummaryMarkdownGenerator: MarkdownGenerator {}
-
-struct GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
-    let parser = XcodeProjectTemplateInfoParser()
+class GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
+    let parser:XcodeProjectTemplateInfoParser
     var generator:TextContentGenerator
     var output:OutputType
 
-    init() {
+    init(parser:XcodeProjectTemplateInfoParser) {
+        self.parser = parser
         self.generator = XcodeTemplateInfoMarkdownGenerator()
         self.output = MarkdownOutput()
     }
     
     func start() {
-        let shouldMapAllXcodeTemplates = Input.boolForArg(Input.Arg.xcodeAllTemplates)
+        let selectedTemplate = Input.selectedTemplate
+        let isSelectedSingleTemplate = selectedTemplate != nil
 
         var templateInfos:[String: TemplateInfo] = [:]
-        if shouldMapAllXcodeTemplates {
+        if isSelectedSingleTemplate {
+            templateInfos = self.allDependenciesById(for: selectedTemplate!)
+        }else{
             templateInfos = parser.itemsById()
-        }
-        // if Should Map Signle Xcode Template
-        else if let selectedTemplate = Input.valueForArg(Input.Arg.xcodeSelectedTemplate) {
-            templateInfos = self.allDependenciesById(for: selectedTemplate)
         }
 
         for (_, info) in templateInfos {
@@ -40,6 +37,12 @@ struct GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
 
             let content = self.generator.fileContent(for: info, availableAncestorsById: templateInfos)
             output.write(content: content, fileName: fileName)
+        }
+
+        if isSelectedSingleTemplate,
+            let info = self.templateInfo(for: selectedTemplate!, availableTemplatesById: templateInfos) {
+            var plist = info.plist
+
         }
     }
 }

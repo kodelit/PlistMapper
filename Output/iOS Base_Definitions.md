@@ -63,8 +63,12 @@
 					    // Do any additional setup after loading the view.
 					```
 
-					- End : `}
-`
+					- End : 
+
+					```
+					}
+					
+					```
 
 					- Indent : `YES`
 
@@ -82,8 +86,12 @@
 					    // Do any additional setup after loading the view.
 					```
 
-					- End : `}
-`
+					- End : 
+
+					```
+					}
+					
+					```
 
 					- Indent : `YES`
 

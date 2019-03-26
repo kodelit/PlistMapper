@@ -8,12 +8,6 @@
 
 import Foundation
 
-extension Input.Arg {
-    static var xcodeAllTemplates:String { return "--xcode-all-proj-templates" }
-    static var xcodeSelectedTemplate:String { return "--xcode-proj-template" }
-    static var xcodeTemplateInheritanceMap:String { return "--xcode-proj-template-inheritance-map" }
-}
-
 protocol XcodeTempateInfoTask: Task {
     var parser:XcodeProjectTemplateInfoParser { get }
 }
@@ -34,7 +28,7 @@ extension XcodeTempateInfoTask {
         if let selected = self.templateInfo(for: templateIdOrName, availableTemplatesById: templatesById) {
             result[selected.identifier] = selected
 
-            if let ancestors = selected.ancestors() {
+            if let ancestors = selected.ancestorsIds() {
                 for ancestor in ancestors {
                     result.merge(self.allDependenciesById(for: ancestor)) { (old, _) -> TemplateInfo in
                         return old
