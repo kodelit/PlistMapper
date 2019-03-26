@@ -32,7 +32,7 @@ struct XcodeProjectTemplateInfoParser: PlistParserType {
     mutating func reload() {
         var items:[Item] = []
         for directory in templatePaths {
-            print(directory)
+//            print("Loading dir:", directory)
             do {
                 let path = (directory as NSString).resolvingSymlinksInPath as String
 

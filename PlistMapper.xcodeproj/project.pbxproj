@@ -84,7 +84,6 @@
 		B5BC24FA2246DAAD0029B219 /* TextContentGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextContentGenerator.swift; sourceTree = "<group>"; };
 		B5BC24FD2246DD430029B219 /* OutputType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OutputType.swift; sourceTree = "<group>"; };
 		B5BC24FF2246DD6A0029B219 /* FreeMindOutput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FreeMindOutput.swift; sourceTree = "<group>"; };
-		B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertySummaryMarkdownGenerator.swift; sourceTree = "<group>"; };
 		B5C51CF82248F14100CECEC8 /* UniquePlistDataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniquePlistDataType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -143,7 +142,6 @@
 			children = (
 				B5BC24EF2246A2F00029B219 /* GenerateXcodeTempateDescriptionTask.swift */,
 				B5AF821B22457FED0040AAF4 /* MarkdownGenerator.swift */,
-				B5C51CF62248F0E600CECEC8 /* PropertySummaryMarkdownGenerator.swift */,
 				B5BC24F32246A83A0029B219 /* MarkdownOutput.swift */,
 			);
 			path = "Generate Xcode Template Descritpions";
