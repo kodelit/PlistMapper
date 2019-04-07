@@ -6,26 +6,39 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 ### Maps to:
 
 - [x] markdown
-	- [x] xcode project template descriptions (`TemplateInfo.plist` -> **`<output>/Template Name.md`**)
+	- [x] Xcode project template descriptions (`TemplateInfo.plist` -> **`<output>/Template Name.md`**)
 		- [x] link to original TemplateInfo.plist
 		- [x] link to template directory
 		- [x] links to descriptions, directories and plists of all ancestors
 
 		> Examples:  [Core Data Cocoa Touch App.md](Output/Core%20Data%20Cocoa%20Touch%20App.md), [Cocoa Touch App Base.md](Output/Cocoa%20Touch%20App%20Base.md), [**Single View App.md**](Output/Single%20View%20App.md)
 	
-	- [ ] other cases
+	- [x] Xcode project template combined description (`TemplateInfo.plist` -> **`<output>/Template Name Combined.md`**)  
+		Selected template info combined with its ancestors. Contains all definitions, options, etc. merged in to one file.
+		> Example: [**Single View App Combined.md**](Output/Single%20View%20App%20Combined.md)
+	
+	- [ ] Other cases
 
 		
-- [x] mindmap (freemind format) - visualize inheritance of plists:
-	- [x]  xcode templates inheritance mind maps
+- [x] Mindmap (freemind format) - visualize inheritance of plists:
+	- [x] Xcode template inheritance mind maps
 		- [x] FreeMind format (`TemplateInfo.plist` -> **`<output>/Template Name Inheritance Map.mm`**)
 		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name Inheritance Map.xmind`**)  
 			xmind mind map contains links to descriptions for every template
 			
-		![Xmind](Docs/thumbnail.png)
-	- [x] xdoce tempates full maps
+		![Xmind](Docs/inherit_thumbnail.png)
+		
+	- [x] Xcode tempate full map
 		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name Full Map.xmind`**)  
-	- [ ] other cases
+		
+		![Xmind](Docs/full_thumbnail.png)
+		
+	- [x] Xcode template inheritance flat map
+		- [x] [XMind](https://www.xmind.net) format (`TemplateInfo.plist` -> **`<output>/Template Name Flat Map.xmind`**)
+		
+		![Xmind](Docs/flat_thumbnail.png)
+		
+	- [ ] Other cases
 
 ### Arguments
 - `--output <dir>`
