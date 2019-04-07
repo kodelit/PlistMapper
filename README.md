@@ -51,11 +51,13 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 	
 	- template defined using its identifier (TemplateInfo.plist:Identifier) or its name
 	- all ancestors of the template
+	- template combined with its ancestors
 
 	and mind map file to visualise:
 	
 	- whole tree of selected template
 	- inheritance tree of selected template (simplified with only templates names)
+	- inheritance flat map of selected template
 
 	**If this argument is not defined there will be descriptions generated for every known template, but without mind maps.**
 	
