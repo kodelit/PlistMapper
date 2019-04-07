@@ -2,7 +2,7 @@
 //  MarkdownGenerator.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 22/03/2019.
+//  Created by Grzegorz Maciak on 22/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
@@ -12,7 +12,25 @@ struct Markdown {
     static let fileExtension = "md"
 }
 
-protocol MarkdownGenerator: TextContentGenerator {}
+protocol MarkdownGenerator: TextContentGeneratorProtocol {
+
+    // MARK: With default implementations
+    func rowForKey(_ key:String, indentationLevel level:Int) -> String
+    func rowForString(_ value:String, key:String?, indentationLevel level:Int) -> String
+    func rowForBool(_ value:Bool, key:String?, indentationLevel level:Int) -> String
+    func rowForNumber(_ value:NSNumber, key:String?, indentationLevel level:Int) -> String
+    func rowsForArray(_ array:[Any], indentationLevel level:Int) -> [String]
+    func rowsForDictionary(_ dict:[String: Any], indentationLevel level:Int) -> [String]
+    func rowForUnknown(_ value:Any, key:String?, indentationLevel level:Int) -> String
+
+    func rows(for inputValue:Any, indentationLevel level:Int) -> [String]
+
+    func fileHead<T>(for info:inout PlistDataProtocol, availableAncestorsById:[String: T]?) -> String where T:UniquePlistDataProtocol
+    func fileBody(with dict:[String: Any]) -> String
+}
+
+
+// MARK: - Default Implementations
 
 extension MarkdownGenerator {
 
@@ -141,7 +159,18 @@ extension MarkdownGenerator {
 
     // MARK: - Main
 
-    func fileContent(for info:PlistDataType, availableAncestorsById:[String: UniquePlistDataType]?) -> String {
+    func fileContent<T>(for info:PlistDataProtocol, availableAncestorsById:[String: T]?) -> String where T:UniquePlistDataProtocol {
+        var templateInfo = info
+        var content = self.fileHead(for: &templateInfo, availableAncestorsById: availableAncestorsById)
+
+        // add other properties
+        let dict = templateInfo.plist
+        let other = self.fileBody(with: dict)
+        content.append("\n\n---\n\n\(other)")
+        return content
+    }
+
+    func fileHead<T>(for info:inout PlistDataProtocol, availableAncestorsById:[String: T]?) -> String where T:UniquePlistDataProtocol {
         let name = info.title
         let path = info.path
         var dict = info.plist
@@ -152,7 +181,7 @@ extension MarkdownGenerator {
         let excapedPath = path.escapedPath()
 
         let isPathSymbolic = fileDir.starts(with: "~")
-        let hasPlistIdentifier = info is UniquePlistDataType
+        let hasPlistIdentifier = info is T
 
         var content:String
         if isPathSymbolic {
@@ -176,24 +205,23 @@ extension MarkdownGenerator {
             """
         }
 
-        if let uniqueInfo = info as? UniquePlistDataType {
+        if let uniqueInfo = info as? T {
             let key = type(of:uniqueInfo).identifierKey
-            if let id = dict[key] {
-                dict[key] = nil
+            dict[key] = nil
 
-                // add id first
-                content.append("\n\n### \(key)\n\n- \(id)")
+            // add id first
+            let id = uniqueInfo.identifier
+            content.append("\n\n### \(key)\n\n- \(id)")
 
-                if !isPathSymbolic {
-                    content.append(" ( [directory](\(escapedFileDir)), [plist](\(excapedPath)) )")
-                }
+            if !isPathSymbolic {
+                content.append(" ( [directory](\(escapedFileDir)), [plist](\(excapedPath)) )")
             }
 
             // add ancestors
             if let ancestorsKey = type(of:uniqueInfo).ancestorsKey,
-                let ancestors = dict[ancestorsKey] as? [String] {
+                let ancestors = uniqueInfo.ancestorsIds() {
                 dict[ancestorsKey] = nil
-                
+
                 let keyRow = "\n\n### \(ancestorsKey)"
                 content.append(keyRow)
 
@@ -204,17 +232,27 @@ extension MarkdownGenerator {
                     {
                         let escapedDescriptionFileName = "\(markdownFileName).\(Markdown.fileExtension)".escapedPath()
                         let escapedFileDir = ancestorInfo.sourceDir().escapedPath()
-                        let excapedPath = ancestorInfo.path.escapedPath()
-                        valueRow += " ( [**\(ancestorInfo.title)**](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
+
+                        let isPathSymbolic = escapedFileDir.starts(with: "~")
+                        if isPathSymbolic {
+                            valueRow += " ( [**\(ancestorInfo.title)**](\(escapedDescriptionFileName)) )"
+                        }else{
+                            let excapedPath = ancestorInfo.path.escapedPath()
+                            valueRow += " ( [**\(ancestorInfo.title)**](\(escapedDescriptionFileName)), [directory](\(escapedFileDir)), [plist](\(excapedPath)) )"
+                        }
+
                     }
                     content.append(valueRow)
                 }
             }
         }
 
-        // add other properties
-        let other = self.rows(for: dict, indentationLevel: Self.noIndentationLevel).joined(separator: "\n\n")
-        content.append("\n\n---\n\n\(other)")
+        info.plist = dict
         return content
+    }
+
+    func fileBody(with dict:[String: Any]) -> String {
+        let other = self.rows(for: dict, indentationLevel: Self.noIndentationLevel).joined(separator: "\n\n")
+        return other
     }
 }

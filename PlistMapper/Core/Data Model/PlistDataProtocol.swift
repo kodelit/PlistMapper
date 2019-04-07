@@ -2,16 +2,16 @@
 //  InfoPlistDetails.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 22/03/2019.
+//  Created by Grzegorz Maciak on 22/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
 import Foundation
 
-protocol PlistDataType {
+protocol PlistDataProtocol {
     var title:String { get }
     var path:String { get }
-    var plist:[String:Any] { get }
+    var plist:[String:Any] { get set }
 
     init?(path:String, plist:[String:Any])
 
@@ -22,7 +22,7 @@ protocol PlistDataType {
     func outputFileName() -> String?
 }
 
-extension PlistDataType {
+extension PlistDataProtocol {
     func sourceFileNameWithExtension() -> String? {
         let components = path.components(separatedBy: "/")
         guard let fileName = components.last, !fileName.isEmpty else {

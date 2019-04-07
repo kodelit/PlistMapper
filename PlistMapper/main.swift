@@ -2,7 +2,7 @@
 //  main.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 22/03/2019.
+//  Created by Grzegorz Maciak on 22/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
@@ -40,7 +40,8 @@ let parser = XcodeProjectTemplateInfoParser()
 
 let handlers:[Task] = [GenerateXcodeTempateDescriptionTask(parser: parser),
                        GenerateXcodeTempateInheritanceMapTask(parser: parser),
-                       GenerateXcodeTempateFullMapTask(parser: parser)]
+                       GenerateXcodeTempateFullMapTask(parser: parser),
+                       GenerateXcodeTempateFlatMapTask(parser: parser)]
 
 // MARK: - Main
 

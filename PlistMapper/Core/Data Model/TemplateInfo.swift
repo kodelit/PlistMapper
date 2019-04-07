@@ -2,13 +2,13 @@
 //  TemplateInfo.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 22/03/2019.
+//  Created by Grzegorz Maciak on 22/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
 import Foundation
 
-struct TemplateInfo: UniquePlistDataType {
+struct TemplateInfo: UniquePlistDataProtocol {
     static let fileExtension = "xctemplate"
 
     var templateName:String
@@ -46,6 +46,8 @@ struct TemplateInfo: UniquePlistDataType {
         self.plist = plist
     }
 
+    // MARK: - Init
+
     init?(path:String) {
         guard let plist = NSDictionary(contentsOfFile: path) as? [String: Any] else {
             return nil
@@ -57,4 +59,6 @@ struct TemplateInfo: UniquePlistDataType {
         return title
     }
 }
+
+
 

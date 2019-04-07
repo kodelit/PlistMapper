@@ -2,7 +2,7 @@
 //  Date+Timestamp.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 25/03/2019.
+//  Created by Grzegorz Maciak on 25/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 

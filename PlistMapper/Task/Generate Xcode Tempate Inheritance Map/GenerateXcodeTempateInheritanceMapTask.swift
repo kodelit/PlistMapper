@@ -2,21 +2,23 @@
 //  GenerateXcodeTempateInheritanceMapTask.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 23/03/2019.
+//  Created by Grzegorz Maciak on 23/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
 import Foundation
 
+struct XMindInheritanceMapGenerator: XMindGeneratorProtocol {
+    var fullMap:Bool = false
+    var ancestorsFolded:Bool = false
+    var foldDeepNodes:Bool = false
+}
+
 struct GenerateXcodeTempateInheritanceMapTask: XcodeTempateInfoTask {
     let parser:XcodeProjectTemplateInfoParser
-    var generators:[TextContentGenerator]
-    var outputs:[OutputType]
 
     init(parser:XcodeProjectTemplateInfoParser) {
         self.parser = parser
-        self.generators = [XMindGenerator(), FreeMindGenerator()]
-        self.outputs = [XMindOutput(), FreeMindOutput()]
     }
 
     func start() {
@@ -26,11 +28,14 @@ struct GenerateXcodeTempateInheritanceMapTask: XcodeTempateInfoTask {
             if let info = self.templateInfo(for: selectedTemplate, availableTemplatesById: templatesById),
                 let fileName = info.outputFileName()
             {
-                for index in 0...1  {
-                    let generator = self.generators[index]
+                let generators:[TextContentGeneratorProtocol] = [XMindInheritanceMapGenerator(), FreeMindGenerator()]
+                let outputs:[OutputType] = [XMindOutput(), FreeMindOutput()]
+
+                for index in 0..<generators.count  {
+                    let generator = generators[index]
                     let content = generator.fileContent(for: info, availableAncestorsById: templatesById)
 
-                    let output = self.outputs[index]
+                    let output = outputs[index]
                     let outputFileName = fileName + " Inheritance Map"
                     output.write(content: content, fileName: outputFileName)
                 }

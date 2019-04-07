@@ -2,7 +2,7 @@
 //  PlistParserType.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 22/03/2019.
+//  Created by Grzegorz Maciak on 22/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
@@ -20,7 +20,7 @@ public protocol PlistParserType {
     func parsePlists(filePaths:[String]) -> [Item]
 }
 
-extension PlistParserType where Item: PlistDataType {
+extension PlistParserType where Item: PlistDataProtocol {
     func parsePlist(filePath:String) -> Item? {
         let path = (filePath as NSString).resolvingSymlinksInPath as String
         guard let plist = NSDictionary(contentsOfFile: path) as? [String: Any],
@@ -39,7 +39,7 @@ extension PlistParserType where Item: PlistDataType {
     }
 }
 
-extension PlistParserType where Item: UniquePlistDataType {
+extension PlistParserType where Item: UniquePlistDataProtocol {
     func itemsById() -> [String: Item] {
         return self.items.reduce(into: [String: Item](), { (result, item) in
             result[item.identifier] = item

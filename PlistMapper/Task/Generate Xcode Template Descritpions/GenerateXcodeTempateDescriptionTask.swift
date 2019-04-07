@@ -2,7 +2,7 @@
 //  XcodeTempateInfoArgsHandler.swift
 //  PlistMapper
 //
-//  Created by Grzegorz on 23/03/2019.
+//  Created by Grzegorz Maciak on 23/03/2019.
 //  Copyright © 2019 kodelit. All rights reserved.
 //
 
@@ -10,13 +10,9 @@ import Foundation
 
 class GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
     let parser:XcodeProjectTemplateInfoParser
-    var generator:TextContentGenerator
-    var output:OutputType
 
     init(parser:XcodeProjectTemplateInfoParser) {
         self.parser = parser
-        self.generator = XcodeTemplateInfoMarkdownGenerator()
-        self.output = MarkdownOutput()
     }
     
     func start() {
@@ -30,19 +26,28 @@ class GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
             templateInfos = parser.itemsById()
         }
 
+        let output = MarkdownOutput()
+        let generator = XcodeTemplateCombinedInfoMarkdownGenerator()
         for (_, info) in templateInfos {
             guard let fileName = info.outputFileName() else {
                 continue
             }
 
-            let content = self.generator.fileContent(for: info, availableAncestorsById: templateInfos)
+            let content = generator.fileContent(for: info, availableAncestorsById: templateInfos)
             output.write(content: content, fileName: fileName)
         }
 
         if isSelectedSingleTemplate,
-            let info = self.templateInfo(for: selectedTemplate!, availableTemplatesById: templateInfos) {
-            var plist = info.plist
+            var info = self.templateInfo(for: selectedTemplate!, availableTemplatesById: templateInfos),
+            let fileName = info.outputFileName()
+        {
+            info.loadAncestorsTree(with: templateInfos)
+            info.plist = info.composedPlist()
 
+            let generator = XcodeTemplateCombinedInfoMarkdownGenerator()
+            let content = generator.fileContent(for: info, availableAncestorsById: templateInfos)
+            let outputFileName = fileName + " Combined"
+            output.write(content: content, fileName: outputFileName)
         }
     }
 }
