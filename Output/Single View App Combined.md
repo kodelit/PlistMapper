@@ -467,146 +467,9 @@ This template provides a starting point for an application that uses a single vi
 
 ### Options :  <span id="a_Options"/>[↩](#m_Options)
 
-By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: languageChoice)</span> | <span id="m_1: languageChoice">[1: languageChoice](#a_1: languageChoice)</span> | <span id="m_2: productName">[2: productName](#a_2: productName)</span> | <span id="m_3: organizationName">[3: organizationName](#a_3: organizationName)</span> | <span id="m_4: bundleIdentifierPrefix">[4: bundleIdentifierPrefix](#a_4: bundleIdentifierPrefix)</span> | <span id="m_5: bundleIdentifier">[5: bundleIdentifier](#a_5: bundleIdentifier)</span> | <span id="m_6: languageChoice">[6: languageChoice](#a_6: languageChoice)</span> | <span id="m_7: languageChoice">[7: languageChoice](#a_7: languageChoice)</span> | <span id="m_8: languageChoice">[8: languageChoice](#a_8: languageChoice)</span> | <span id="m_9: hasUnitTests">[9: hasUnitTests](#a_9: hasUnitTests)</span> | <span id="m_10: hasUITests">[10: hasUITests](#a_10: hasUITests)</span> | <span id="m_11: languageChoice">[11: languageChoice](#a_11: languageChoice)</span> | <span id="m_12: languageChoice">[12: languageChoice](#a_12: languageChoice)</span> | <span id="m_13: coreData">[13: coreData](#a_13: coreData)</span> | <span id="m_14: languageChoice">[14: languageChoice](#a_14: languageChoice)</span>
+By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleIdentifier)</span> | <span id="m_1:bundleIdentifierPrefix">[1:bundleIdentifierPrefix](#a_1:bundleIdentifierPrefix)</span> | <span id="m_2:coreData">[2:coreData](#a_2:coreData)</span> | <span id="m_3:hasUITests">[3:hasUITests](#a_3:hasUITests)</span> | <span id="m_4:hasUnitTests">[4:hasUnitTests](#a_4:hasUnitTests)</span> | <span id="m_5:languageChoice">[5:languageChoice](#a_5:languageChoice)</span> | <span id="m_6:organizationName">[6:organizationName](#a_6:organizationName)</span> | <span id="m_7:productName">[7:productName](#a_7:productName)</span>
 
-- 0 :  <span id="a_0: languageChoice"/>[↩](#m_0: languageChoice)
-
-	- Identifier : `languageChoice`
-
-	- Units : 
-
-		- `Objective-C` : 
-
-			- Definitions : 
-
-		- Swift : 
-
-			- Definitions : 
-
-				- `*:class:*` : ``
-
-				- `*:implementation` : 
-
-					- Beginning : 
-
-					```
-					class ___*___ {
-					
-					```
-
-					- End : 
-
-					```
-					
-					}
-					
-					```
-
-					- Indent : `YES`
-
-				- `*:implementation:methods:init` : 
-
-					- Beginning : 
-
-					```
-					override init() {
-					    super.init()
-					
-					```
-
-					- End : 
-
-					```
-					}
-					
-					
-					```
-
-					- Indent : `YES`
-
-				- `*:imports:importFramework:*` : `import ___*___`
-
-				- `*:imports:importHeader:*` : ``
-
-- 1 :  <span id="a_1: languageChoice"/>[↩](#m_1: languageChoice)
-
-	- Identifier : `languageChoice`
-
-	- Units : 
-
-		- Swift : 
-
-			- Project : 
-
-				- Configurations : 
-
-					- Debug : 
-
-						- `SWIFT_ACTIVE_COMPILATION_CONDITIONS` : `DEBUG`
-
-						- `SWIFT_OPTIMIZATION_LEVEL` : `-Onone`
-
-					- Release : 
-
-						- `SWIFT_COMPILATION_MODE` : `wholemodule`
-
-						- `SWIFT_OPTIMIZATION_LEVEL` : `-O`
-
-			- Targets : 
-
-				- 0 : 
-
-					- Concrete : `NO`
-
-					- SharedSettings : 
-
-						- `SWIFT_VERSION` : `5.0`
-
-- 2 :  <span id="a_2: productName"/>[↩](#m_2: productName)
-
-	- Description : `Your new product's name`
-
-	- EmptyReplacement : `ProductName`
-
-	- Identifier : `productName`
-
-	- Name : `Product Name:`
-
-	- NotPersisted : `YES`
-
-	- Required : `YES`
-
-	- SortOrder : `-2`
-
-	- Type : `text`
-
-- 3 :  <span id="a_3: organizationName"/>[↩](#m_3: organizationName)
-
-	- Default : `___FULLUSERNAME___`
-
-	- Description : `Your company's name`
-
-	- Identifier : `organizationName`
-
-	- Name : `Organization Name:`
-
-	- Type : `text`
-
-- 4 :  <span id="a_4: bundleIdentifierPrefix"/>[↩](#m_4: bundleIdentifierPrefix)
-
-	- Description : `Your organization's bundle identifier prefix`
-
-	- EmptyReplacement : `com.yourcompany`
-
-	- Identifier : `bundleIdentifierPrefix`
-
-	- Name : `Organization Identifier:`
-
-	- Required : `YES`
-
-	- Type : `text`
-
-- 5 :  <span id="a_5: bundleIdentifier"/>[↩](#m_5: bundleIdentifier)
+- 0 :  <span id="a_0:bundleIdentifier"/>[↩](#m_0:bundleIdentifier)
 
 	- Default : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___`
 
@@ -620,387 +483,21 @@ By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: language
 
 	- Type : `static`
 
-- 6 :  <span id="a_6: languageChoice"/>[↩](#m_6: languageChoice)
+- 1 :  <span id="a_1:bundleIdentifierPrefix"/>[↩](#m_1:bundleIdentifierPrefix)
 
-	- Identifier : `languageChoice`
+	- Description : `Your organization's bundle identifier prefix`
 
-	- Units : 
+	- EmptyReplacement : `com.yourcompany`
 
-		- Swift : 
+	- Identifier : `bundleIdentifierPrefix`
 
-			- Definitions : 
-
-				- `main.swift` : 
-
-					- SortOrder : `999`
-
-				- `main.swift:main` : 
-
-					- Beginning : ``
-
-					- End : ``
-
-- 7 :  <span id="a_7: languageChoice"/>[↩](#m_7: languageChoice)
-
-	- Identifier : `languageChoice`
-
-	- Units : 
-
-		- `Objective-C` : 
-
-			- Definitions : 
-
-				- `*:implementation:viewDidLoad` : 
-
-					- Beginning : 
-
-					```
-					- (void)viewDidLoad {
-					    [super viewDidLoad];
-					    // Do any additional setup after loading the view.
-					```
-
-					- End : 
-
-					```
-					}
-					
-					```
-
-					- Indent : `YES`
-
-		- Swift : 
-
-			- Definitions : 
-
-				- `*:implementation:viewDidLoad` : 
-
-					- Beginning : 
-
-					```
-					override func viewDidLoad() {
-					    super.viewDidLoad()
-					    // Do any additional setup after loading the view.
-					```
-
-					- End : 
-
-					```
-					}
-					
-					```
-
-					- Indent : `YES`
-
-				- `*:imports:importCocoa` : `import UIKit`
-
-- 8 :  <span id="a_8: languageChoice"/>[↩](#m_8: languageChoice)
-
-	- Default : `Swift`
-
-	- Description : `Your primary implementation language.`
-
-	- Identifier : `languageChoice`
-
-	- Name : `Language:`
+	- Name : `Organization Identifier:`
 
 	- Required : `YES`
 
-	- Type : `popup`
+	- Type : `text`
 
-	- Values : 
-
-		- 0 : `Swift`
-
-		- 1 : `Objective-C`
-
-	- Variables : 
-
-		- `Objective-C` : 
-
-			- ibCustomModuleProvider : ``
-
-			- moduleNamePrefixForClasses : ``
-
-		- Swift : 
-
-			- ibCustomModuleProvider : `target`
-
-			- moduleNamePrefixForClasses : `$(PRODUCT_MODULE_NAME).`
-
-- 9 :  <span id="a_9: hasUnitTests"/>[↩](#m_9: hasUnitTests)
-
-	- Default : `true`
-
-	- Identifier : `hasUnitTests`
-
-	- Name : `Include Unit Tests`
-
-	- NotPersisted : `NO`
-
-	- SortOrder : `100`
-
-	- Type : `checkbox`
-
-	- Units : 
-
-		- true : 
-
-			- Components : 
-
-				- 0 : 
-
-					- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle`
-
-					- Name : `___PACKAGENAME___Tests`
-
-- 10 :  <span id="a_10: hasUITests"/>[↩](#m_10: hasUITests)
-
-	- Default : `true`
-
-	- Identifier : `hasUITests`
-
-	- Name : `Include UI Tests`
-
-	- NotPersisted : `NO`
-
-	- SortOrder : `101`
-
-	- Type : `checkbox`
-
-	- Units : 
-
-		- true : 
-
-			- Components : 
-
-				- 0 : 
-
-					- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUITestBundle`
-
-					- Name : `___PACKAGENAME___UITests`
-
-- 11 :  <span id="a_11: languageChoice"/>[↩](#m_11: languageChoice)
-
-	- Identifier : `languageChoice`
-
-	- Units : 
-
-		- `Objective-C` : 
-
-			- Definitions : 
-
-				- `*:implementation:methods:viewDidLoad:super` : 
-
-				```
-				[super viewDidLoad];
-				// Do any additional setup after loading the view.
-				```
-
-				- `AppDelegate.h:interface:window` : 
-
-				```
-				@property (strong, nonatomic) UIWindow *window;
-				
-				```
-
-				- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
-
-				- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return YES;`
-
-				- `main.m:main` : 
-
-					- Beginning : `int main(int argc, char * argv[]) {`
-
-					- End : `}`
-
-					- Indent : `YES`
-
-				- `main.m:main:UIApplicationMain` : 
-
-				```
-				@autoreleasepool {
-				    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
-				}
-				
-				```
-
-			- Nodes : 
-
-				- 0 : `main.m:comments`
-
-				- 1 : `main.m:imports:importCocoa`
-
-				- 2 : `main.m:imports:importHeader:AppDelegate.h`
-
-				- 3 : `main.m:main:UIApplicationMain`
-
-				- 4 : `AppDelegate.h:comments`
-
-				- 5 : `AppDelegate.h:imports:importCocoa`
-
-				- 6 : `AppDelegate.h:interface(AppDelegate : UIResponder <UIApplicationDelegate>)`
-
-				- 7 : `AppDelegate.h:interface:window`
-
-				- 8 : `AppDelegate.m:comments`
-
-				- 9 : `AppDelegate.m:imports:importHeader:AppDelegate.h`
-
-				- 10 : `AppDelegate.m:extension`
-
-				- 11 : `AppDelegate.m:implementation:synthesize`
-
-				- 12 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)
-				```
-
-				- 13 : `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
-
-				- 14 : `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
-
-				- 15 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationWillResignActive(- (void\)applicationWillResignActive:(UIApplication *\)application)
-				```
-
-				- 16 : `AppDelegate.m:implementation:methods:applicationWillResignActive:comments`
-
-				- 17 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationDidEnterBackground(- (void\)applicationDidEnterBackground:(UIApplication *\)application)
-				```
-
-				- 18 : `AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments`
-
-				- 19 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationWillEnterForeground(- (void\)applicationWillEnterForeground:(UIApplication *\)application)
-				```
-
-				- 20 : `AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments`
-
-				- 21 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationDidBecomeActive(- (void\)applicationDidBecomeActive:(UIApplication *\)application)
-				```
-
-				- 22 : `AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments`
-
-				- 23 : 
-
-				```
-				AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(UIApplication *\)application)
-				```
-
-				- 24 : `AppDelegate.m:implementation:methods:applicationWillTerminate:comments`
-
-		- Swift : 
-
-			- Definitions : 
-
-				- `*:implementation:methods:viewDidLoad:super` : 
-
-				```
-				super.viewDidLoad()
-				// Do any additional setup after loading the view.
-				```
-
-				- `AppDelegate.swift:UIApplicationMain` : `@UIApplicationMain`
-
-				- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
-
-				- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return true`
-
-				- `AppDelegate.swift:implementation:properties:window` : `var window: UIWindow?`
-
-			- Nodes : 
-
-				- 0 : `AppDelegate.swift:comments`
-
-				- 1 : `AppDelegate.swift:imports:importCocoa`
-
-				- 2 : `AppDelegate.swift:UIApplicationMain`
-
-				- 3 : `AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)`
-
-				- 4 : `AppDelegate.swift:implementation:properties:window`
-
-				- 5 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?\) -> Bool)
-				```
-
-				- 6 : `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
-
-				- 7 : `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
-
-				- 8 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationWillResignActive(func applicationWillResignActive(_ application: UIApplication\))
-				```
-
-				- 9 : `AppDelegate.swift:implementation:methods:applicationWillResignActive:comments`
-
-				- 10 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationDidEnterBackground(func applicationDidEnterBackground(_ application: UIApplication\))
-				```
-
-				- 11 : `AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments`
-
-				- 12 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationWillEnterForeground(func applicationWillEnterForeground(_ application: UIApplication\))
-				```
-
-				- 13 : `AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments`
-
-				- 14 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationDidBecomeActive(func applicationDidBecomeActive(_ application: UIApplication\))
-				```
-
-				- 15 : `AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments`
-
-				- 16 : 
-
-				```
-				AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(_ application: UIApplication\))
-				```
-
-				- 17 : `AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
-
-- 12 :  <span id="a_12: languageChoice"/>[↩](#m_12: languageChoice)
-
-	- Identifier : `languageChoice`
-
-	- Units : 
-
-		- `Objective-C` : 
-
-			- Definitions : 
-
-				- `*:implementation:methods:awakeFromNib:super` : `[super awakeFromNib];`
-
-		- Swift : 
-
-			- Definitions : 
-
-				- `*:implementation:methods:awakeFromNib:super` : `super.awakeFromNib()`
-
-- 13 :  <span id="a_13: coreData"/>[↩](#m_13: coreData)
+- 2 :  <span id="a_2:coreData"/>[↩](#m_2:coreData)
 
 	- Default : `false`
 
@@ -1198,45 +695,470 @@ By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: language
 
 					- languageChoice : `Swift`
 
-- 14 :  <span id="a_14: languageChoice"/>[↩](#m_14: languageChoice)
+- 3 :  <span id="a_3:hasUITests"/>[↩](#m_3:hasUITests)
+
+	- Default : `true`
+
+	- Identifier : `hasUITests`
+
+	- Name : `Include UI Tests`
+
+	- NotPersisted : `NO`
+
+	- SortOrder : `101`
+
+	- Type : `checkbox`
+
+	- Units : 
+
+		- true : 
+
+			- Components : 
+
+				- 0 : 
+
+					- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUITestBundle`
+
+					- Name : `___PACKAGENAME___UITests`
+
+- 4 :  <span id="a_4:hasUnitTests"/>[↩](#m_4:hasUnitTests)
+
+	- Default : `true`
+
+	- Identifier : `hasUnitTests`
+
+	- Name : `Include Unit Tests`
+
+	- NotPersisted : `NO`
+
+	- SortOrder : `100`
+
+	- Type : `checkbox`
+
+	- Units : 
+
+		- true : 
+
+			- Components : 
+
+				- 0 : 
+
+					- Identifier : `com.apple.dt.unit.cocoaTouchApplicationUnitTestBundle`
+
+					- Name : `___PACKAGENAME___Tests`
+
+- 5 :  <span id="a_5:languageChoice"/>[↩](#m_5:languageChoice)
+
+	- Default : `Swift`
+
+	- Description : `Your primary implementation language.`
 
 	- Identifier : `languageChoice`
+
+	- Name : `Language:`
+
+	- Required : `YES`
+
+	- Type : `popup`
 
 	- Units : 
 
 		- `Objective-C` : 
 
+			- Definitions : 
+
+				- `*:implementation:methods:awakeFromNib:super` : `[super awakeFromNib];`
+
+				- `*:implementation:methods:viewDidLoad:super` : 
+
+				```
+				[super viewDidLoad];
+				// Do any additional setup after loading the view.
+				```
+
+				- `*:implementation:viewDidLoad` : 
+
+					- Beginning : 
+
+					```
+					- (void)viewDidLoad {
+					    [super viewDidLoad];
+					    // Do any additional setup after loading the view.
+					```
+
+					- End : 
+
+					```
+					}
+					
+					```
+
+					- Indent : `YES`
+
+				- `AppDelegate.h:interface:window` : 
+
+				```
+				@property (strong, nonatomic) UIWindow *window;
+				
+				```
+
+				- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
+
+				- `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return YES;`
+
+				- `main.m:main` : 
+
+					- Beginning : `int main(int argc, char * argv[]) {`
+
+					- End : `}`
+
+					- Indent : `YES`
+
+				- `main.m:main:UIApplicationMain` : 
+
+				```
+				@autoreleasepool {
+				    return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
+				}
+				
+				```
+
 			- Nodes : 
 
-				- 0 : `ViewController.h:comments`
+				- 0 : `main.m:comments`
 
-				- 1 : `ViewController.h:imports:importCocoa`
+				- 1 : `main.m:imports:importCocoa`
 
-				- 2 : `ViewController.h:interface(___FILEBASENAME___ : UIViewController)`
+				- 2 : `main.m:imports:importHeader:AppDelegate.h`
 
-				- 3 : `ViewController.m:comments`
+				- 3 : `main.m:main:UIApplicationMain`
 
-				- 4 : `ViewController.m:imports:importHeader:ViewController.h`
+				- 4 : `AppDelegate.h:comments`
 
-				- 5 : `ViewController.m:extension`
+				- 5 : `AppDelegate.h:imports:importCocoa`
 
-				- 6 : `ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)`
+				- 6 : `AppDelegate.h:interface(AppDelegate : UIResponder <UIApplicationDelegate>)`
 
-				- 7 : `ViewController.m:implementation:methods:viewDidLoad:super`
+				- 7 : `AppDelegate.h:interface:window`
+
+				- 8 : `AppDelegate.m:comments`
+
+				- 9 : `AppDelegate.m:imports:importHeader:AppDelegate.h`
+
+				- 10 : `AppDelegate.m:extension`
+
+				- 11 : `AppDelegate.m:implementation:synthesize`
+
+				- 12 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions(- (BOOL\)application:(UIApplication *\)application didFinishLaunchingWithOptions:(NSDictionary *\)launchOptions)
+				```
+
+				- 13 : `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
+
+				- 14 : `AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+
+				- 15 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationWillResignActive(- (void\)applicationWillResignActive:(UIApplication *\)application)
+				```
+
+				- 16 : `AppDelegate.m:implementation:methods:applicationWillResignActive:comments`
+
+				- 17 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationDidEnterBackground(- (void\)applicationDidEnterBackground:(UIApplication *\)application)
+				```
+
+				- 18 : `AppDelegate.m:implementation:methods:applicationDidEnterBackground:comments`
+
+				- 19 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationWillEnterForeground(- (void\)applicationWillEnterForeground:(UIApplication *\)application)
+				```
+
+				- 20 : `AppDelegate.m:implementation:methods:applicationWillEnterForeground:comments`
+
+				- 21 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationDidBecomeActive(- (void\)applicationDidBecomeActive:(UIApplication *\)application)
+				```
+
+				- 22 : `AppDelegate.m:implementation:methods:applicationDidBecomeActive:comments`
+
+				- 23 : 
+
+				```
+				AppDelegate.m:implementation:methods:applicationWillTerminate(- (void\)applicationWillTerminate:(UIApplication *\)application)
+				```
+
+				- 24 : `AppDelegate.m:implementation:methods:applicationWillTerminate:comments`
+
+				- 25 : `ViewController.h:comments`
+
+				- 26 : `ViewController.h:imports:importCocoa`
+
+				- 27 : `ViewController.h:interface(___FILEBASENAME___ : UIViewController)`
+
+				- 28 : `ViewController.m:comments`
+
+				- 29 : `ViewController.m:imports:importHeader:ViewController.h`
+
+				- 30 : `ViewController.m:extension`
+
+				- 31 : `ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)`
+
+				- 32 : `ViewController.m:implementation:methods:viewDidLoad:super`
 
 		- Swift : 
 
+			- Definitions : 
+
+				- `*:class:*` : ``
+
+				- `*:implementation` : 
+
+					- Beginning : 
+
+					```
+					class ___*___ {
+					
+					```
+
+					- End : 
+
+					```
+					
+					}
+					
+					```
+
+					- Indent : `YES`
+
+				- `*:implementation:methods:awakeFromNib:super` : `super.awakeFromNib()`
+
+				- `*:implementation:methods:init` : 
+
+					- Beginning : 
+
+					```
+					override init() {
+					    super.init()
+					
+					```
+
+					- End : 
+
+					```
+					}
+					
+					
+					```
+
+					- Indent : `YES`
+
+				- `*:implementation:methods:viewDidLoad:super` : 
+
+				```
+				super.viewDidLoad()
+				// Do any additional setup after loading the view.
+				```
+
+				- `*:implementation:viewDidLoad` : 
+
+					- Beginning : 
+
+					```
+					override func viewDidLoad() {
+					    super.viewDidLoad()
+					    // Do any additional setup after loading the view.
+					```
+
+					- End : 
+
+					```
+					}
+					
+					```
+
+					- Indent : `YES`
+
+				- `*:imports:importCocoa` : `import UIKit`
+
+				- `*:imports:importFramework:*` : `import ___*___`
+
+				- `*:imports:importHeader:*` : ``
+
+				- `AppDelegate.swift:UIApplicationMain` : `@UIApplicationMain`
+
+				- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body` : `// Override point for customization after application launch.`
+
+				- `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return` : `return true`
+
+				- `AppDelegate.swift:implementation:properties:window` : `var window: UIWindow?`
+
+				- `main.swift` : 
+
+					- SortOrder : `999`
+
+				- `main.swift:main` : 
+
+					- Beginning : ``
+
+					- End : ``
+
 			- Nodes : 
 
-				- 0 : `ViewController.swift:comments`
+				- 0 : `AppDelegate.swift:comments`
 
-				- 1 : `ViewController.swift:imports:importCocoa`
+				- 1 : `AppDelegate.swift:imports:importCocoa`
 
-				- 2 : `ViewController.swift:implementation(___FILEBASENAME___: UIViewController)`
+				- 2 : `AppDelegate.swift:UIApplicationMain`
 
-				- 3 : `ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))`
+				- 3 : `AppDelegate.swift:implementation(AppDelegate: UIResponder, UIApplicationDelegate)`
 
-				- 4 : `ViewController.swift:implementation:methods:viewDidLoad:super`
+				- 4 : `AppDelegate.swift:implementation:properties:window`
+
+				- 5 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions(func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?\) -> Bool)
+				```
+
+				- 6 : `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:body`
+
+				- 7 : `AppDelegate.swift:implementation:methods:applicationdidFinishLaunchingWithOptions:return`
+
+				- 8 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationWillResignActive(func applicationWillResignActive(_ application: UIApplication\))
+				```
+
+				- 9 : `AppDelegate.swift:implementation:methods:applicationWillResignActive:comments`
+
+				- 10 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationDidEnterBackground(func applicationDidEnterBackground(_ application: UIApplication\))
+				```
+
+				- 11 : `AppDelegate.swift:implementation:methods:applicationDidEnterBackground:comments`
+
+				- 12 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationWillEnterForeground(func applicationWillEnterForeground(_ application: UIApplication\))
+				```
+
+				- 13 : `AppDelegate.swift:implementation:methods:applicationWillEnterForeground:comments`
+
+				- 14 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationDidBecomeActive(func applicationDidBecomeActive(_ application: UIApplication\))
+				```
+
+				- 15 : `AppDelegate.swift:implementation:methods:applicationDidBecomeActive:comments`
+
+				- 16 : 
+
+				```
+				AppDelegate.swift:implementation:methods:applicationWillTerminate(func applicationWillTerminate(_ application: UIApplication\))
+				```
+
+				- 17 : `AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
+
+				- 18 : `ViewController.swift:comments`
+
+				- 19 : `ViewController.swift:imports:importCocoa`
+
+				- 20 : `ViewController.swift:implementation(___FILEBASENAME___: UIViewController)`
+
+				- 21 : `ViewController.swift:implementation:methods:viewDidLoad(override func viewDidLoad(\))`
+
+				- 22 : `ViewController.swift:implementation:methods:viewDidLoad:super`
+
+			- Project : 
+
+				- Configurations : 
+
+					- Debug : 
+
+						- `SWIFT_ACTIVE_COMPILATION_CONDITIONS` : `DEBUG`
+
+						- `SWIFT_OPTIMIZATION_LEVEL` : `-Onone`
+
+					- Release : 
+
+						- `SWIFT_COMPILATION_MODE` : `wholemodule`
+
+						- `SWIFT_OPTIMIZATION_LEVEL` : `-O`
+
+			- Targets : 
+
+				- 0 : 
+
+					- Concrete : `NO`
+
+					- SharedSettings : 
+
+						- `SWIFT_VERSION` : `5.0`
+
+	- Values : 
+
+		- 0 : `Swift`
+
+		- 1 : `Objective-C`
+
+	- Variables : 
+
+		- `Objective-C` : 
+
+			- ibCustomModuleProvider : ``
+
+			- moduleNamePrefixForClasses : ``
+
+		- Swift : 
+
+			- ibCustomModuleProvider : `target`
+
+			- moduleNamePrefixForClasses : `$(PRODUCT_MODULE_NAME).`
+
+- 6 :  <span id="a_6:organizationName"/>[↩](#m_6:organizationName)
+
+	- Default : `___FULLUSERNAME___`
+
+	- Description : `Your company's name`
+
+	- Identifier : `organizationName`
+
+	- Name : `Organization Name:`
+
+	- Type : `text`
+
+- 7 :  <span id="a_7:productName"/>[↩](#m_7:productName)
+
+	- Description : `Your new product's name`
+
+	- EmptyReplacement : `ProductName`
+
+	- Identifier : `productName`
+
+	- Name : `Product Name:`
+
+	- NotPersisted : `YES`
+
+	- Required : `YES`
+
+	- SortOrder : `-2`
+
+	- Type : `text`
 
 ### Platforms :  <span id="a_Platforms"/>[↩](#m_Platforms)
 
@@ -1366,30 +1288,6 @@ By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: language
 
 - 0 : 
 
-	- Concrete : `NO`
-
-	- Configurations : 
-
-		- Debug : 
-
-		- Release : 
-
-	- Name : `___PACKAGENAME___`
-
-	- SharedSettings : 
-
-		- `PRODUCT_NAME` : `$(TARGET_NAME)`
-
-- 1 : 
-
-	- SharedSettings : 
-
-		- `INFOPLIST_FILE` : `___PACKAGENAME___/Info.plist`
-
-		- `PRODUCT_BUNDLE_IDENTIFIER` : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`
-
-- 2 : 
-
 	- BuildPhases : 
 
 		- 0 : 
@@ -1404,21 +1302,29 @@ By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: language
 
 			- Class : `Resources`
 
+	- Concrete : `NO`
+
+	- Configurations : 
+
+		- Debug : 
+
+		- Release : 
+
+	- Name : `___PACKAGENAME___`
+
 	- ProductType : `com.apple.product-type.application`
-
-- 3 : 
-
-	- SharedSettings : 
-
-		- `TARGETED_DEVICE_FAMILY` : `1,2`
-
-- 4 : 
 
 	- SharedSettings : 
 
 		- `ASSETCATALOG_COMPILER_APPICON_NAME` : `AppIcon`
 
+		- `INFOPLIST_FILE` : `___PACKAGENAME___/Info.plist`
+
 		- `LD_RUNPATH_SEARCH_PATHS` : `$(inherited) @executable_path/Frameworks`
+
+		- `PRODUCT_BUNDLE_IDENTIFIER` : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___PACKAGENAMEASRFC1034IDENTIFIER___`
+
+		- `PRODUCT_NAME` : `$(TARGET_NAME)`
 
 		- `TARGETED_DEVICE_FAMILY` : `1,2`
 

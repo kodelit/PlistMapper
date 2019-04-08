@@ -16,7 +16,7 @@ struct XcodeTemplateCombinedInfoMarkdownGenerator: MarkdownGenerator {
         guard let identifier = (value as? [String: Any])?[TemplateInfo.identifierKey] as? String else {
             return nil
         }
-        return "\(index): \(identifier)"
+        return "\(index):\(identifier)"
     }
 
     func rowsForArray(_ array:[Any], indentationLevel level:Int) -> [String] {
