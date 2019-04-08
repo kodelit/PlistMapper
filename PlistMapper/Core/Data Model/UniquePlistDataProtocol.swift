@@ -71,34 +71,53 @@ extension UniquePlistDataProtocol {
 }
 
 extension UniquePlistDataProtocol {
-    func composedPlist() -> [String: Any] {
+    func composedPlist(mergeIdentifiedOptions:Bool = true) -> [String: Any] {
         let plists = self.flatMapOfInheritance().map{ $0.plist }
-        let result = self.merge(values: plists) as? [String: Any] ?? [:]
+        let result = self.merge(values: plists, mergeOptions: mergeIdentifiedOptions) as? [String: Any] ?? [:]
         return result
     }
 
-    private func merge(values:[Any]) -> Any {
+    typealias PlistObject = [String: Any]
+
+    private func merge(values:[Any], mergeOptions:Bool) -> Any {
         guard values.count > 0 else {
             fatalError("Not enough values to perform merge!")
         }
-        if let dictionaries = values as? [[String:Any]] {
+        if let dictionaries = values as? [PlistObject] {
             return dictionaries.reduce(into: [String: Any](), { (result, value) in
                 result.merge(value, uniquingKeysWith: { (old, new) -> Any in
-                    return self.merge(values: [old, new])
+                    return self.merge(values: [old, new], mergeOptions: mergeOptions)
                 })
             })
         }else if let arrays = values as? [[String]] {
-            let strings = arrays.reduce(into: [String](), { (result, value) in
+            let strings = arrays
+                .reduce(into: [String](), { (result, value) in
+                    result.append(contentsOf: value)
+                })
+                // remove duplicates
+                .reduce(into: [String](), { (result, value) in
+                    if !result.contains(value) {
+                        result.append(value)
+                    }
+                })
+            return strings
+        }else if mergeOptions, let arrays = values as? [[PlistObject]] {
+            let combinedOptions = arrays.reduce(into: [PlistObject](), { (result, value) in
                 result.append(contentsOf: value)
             })
-            return strings
-                .reduce(into: [String](), { (result, value) in
-                if !result.contains(value) {
-                    result.append(value)
-                }
-            })
+            let optionsById = combinedOptions.reduce(into: [String: [PlistObject]]()) { (result, object) in
+                let id = (object[Self.identifierKey] as? String) ?? ""
+                var objects = result[id] ?? []
+                objects.append(object)
+                result[id] = objects
+            }
+            let keys = Array(optionsById.keys).sorted()
+            let mergedOptions = keys.map { (key) -> Any in
+                let sameIdOptions = optionsById[key] ?? []
+                return self.merge(values: sameIdOptions, mergeOptions: false)
+            }
+            return mergedOptions
         }
-            // TODO: merge duplicates in array (identified by `identifier`)
         else if let arrays = values as? [[Any]] {
             return arrays.reduce(into: [Any](), { (result, value) in
                 result.append(contentsOf: value)

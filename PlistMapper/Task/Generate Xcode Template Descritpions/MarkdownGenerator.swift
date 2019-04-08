@@ -105,7 +105,10 @@ extension MarkdownGenerator {
                 }else if let number = value as? NSNumber {
                     valueRows = [self.rowForNumber(number, key:key, indentationLevel: level)]
                 }else{
-                    let keyRow = self.rowForKey(key, indentationLevel: level)
+                    var keyRow = self.rowForKey(key, indentationLevel: level)
+                    if level == XcodeTemplateCombinedInfoMarkdownGenerator.noIndentationLevel {
+                        keyRow = "\(keyRow) <span id=\"a_\(key)\"/>[↩](#m_\(key))"
+                    }
                     result.append(keyRow)
 
                     valueRows = self.rows(for: value, indentationLevel: level + 1)
@@ -132,10 +135,6 @@ extension MarkdownGenerator {
                 let subrows = self.rows(for: value, indentationLevel: level + 1)
                 rows.append(contentsOf: subrows)
             }
-//            rows = array.reduce(into: [String]()) { (result, value) in
-//                let subrows = self.rows(for: value, indentationLevel: level)
-//                result.append(contentsOf: subrows)
-//            }
         }
         return rows
     }
@@ -162,11 +161,21 @@ extension MarkdownGenerator {
     func fileContent<T>(for info:PlistDataProtocol, availableAncestorsById:[String: T]?) -> String where T:UniquePlistDataProtocol {
         var templateInfo = info
         var content = self.fileHead(for: &templateInfo, availableAncestorsById: availableAncestorsById)
+        /// Plist potentialy updated by the header generator
+        let dict = templateInfo.plist
+
+        let keys = Array(dict.keys).sorted().compactMap { (key) -> String? in
+            if let value = dict[key], value is [String: Any] || value is [Any] {
+                return key
+            }
+            return nil
+        }
+        let links = self.fileMenu(with: keys)
+        content.append("\n\n---\n\(links)")
 
         // add other properties
-        let dict = templateInfo.plist
         let other = self.fileBody(with: dict)
-        content.append("\n\n---\n\n\(other)")
+        content.append("\n\n\(other)")
         return content
     }
 
@@ -207,6 +216,7 @@ extension MarkdownGenerator {
 
         if let uniqueInfo = info as? T {
             let key = type(of:uniqueInfo).identifierKey
+            // remove id to avoid repetition
             dict[key] = nil
 
             // add id first
@@ -220,6 +230,7 @@ extension MarkdownGenerator {
             // add ancestors
             if let ancestorsKey = type(of:uniqueInfo).ancestorsKey,
                 let ancestors = uniqueInfo.ancestorsIds() {
+                // remove ancestors to avoid repetition
                 dict[ancestorsKey] = nil
 
                 let keyRow = "\n\n### \(ancestorsKey)"
@@ -249,6 +260,14 @@ extension MarkdownGenerator {
 
         info.plist = dict
         return content
+    }
+
+    func fileMenu(with keys:[String]) -> String {
+        let links = keys.map { (key) -> String in
+            return "<span id=\"m_\(key)\">[\(key)](#a_\(key))</span>"
+        }
+        let linksRow = links.joined(separator: " | ")
+        return linksRow
     }
 
     func fileBody(with dict:[String: Any]) -> String {

@@ -35,11 +35,11 @@
 - com.apple.dt.unit.coreDataCocoaTouchApplication ( [**Core Data Cocoa Touch App**](Core%20Data%20Cocoa%20Touch%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Definitions">[Definitions](#f_Definitions)</span> | <span id="a_Nodes">[Nodes](#f_Nodes)</span> | <span id="a_Options">[Options](#f_Options)</span> | <span id="a_Platforms">[Platforms](#f_Platforms)</span> | <span id="a_Project">[Project](#f_Project)</span> | <span id="a_Targets">[Targets](#f_Targets)</span>
+<span id="m_Definitions">[Definitions](#a_Definitions)</span> | <span id="m_Nodes">[Nodes](#a_Nodes)</span> | <span id="m_Options">[Options](#a_Options)</span> | <span id="m_Platforms">[Platforms](#a_Platforms)</span> | <span id="m_Project">[Project](#a_Project)</span> | <span id="m_Targets">[Targets](#a_Targets)</span>
 
 ### Concrete : `YES`
 
-### Definitions :  <span id="f_Definitions"/>[↩](#a_Definitions)
+### Definitions :  <span id="a_Definitions"/>[↩](#m_Definitions)
 
 - `*:class:*` : 
 
@@ -431,7 +431,7 @@ This template provides a starting point for an application that uses a single vi
 
 ### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-### Nodes :  <span id="f_Nodes"/>[↩](#a_Nodes)
+### Nodes :  <span id="a_Nodes"/>[↩](#m_Nodes)
 
 - 0 : `Info.plist:Identifier`
 
@@ -465,9 +465,11 @@ This template provides a starting point for an application that uses a single vi
 
 - 15 : `Base.lproj/Main.storyboard`
 
-### Options :  <span id="f_Options"/>[↩](#a_Options)
+### Options :  <span id="a_Options"/>[↩](#m_Options)
 
-- 0 : 
+By identifier: <span id="m_0: languageChoice">[0: languageChoice](#a_0: languageChoice)</span> | <span id="m_1: languageChoice">[1: languageChoice](#a_1: languageChoice)</span> | <span id="m_2: productName">[2: productName](#a_2: productName)</span> | <span id="m_3: organizationName">[3: organizationName](#a_3: organizationName)</span> | <span id="m_4: bundleIdentifierPrefix">[4: bundleIdentifierPrefix](#a_4: bundleIdentifierPrefix)</span> | <span id="m_5: bundleIdentifier">[5: bundleIdentifier](#a_5: bundleIdentifier)</span> | <span id="m_6: languageChoice">[6: languageChoice](#a_6: languageChoice)</span> | <span id="m_7: languageChoice">[7: languageChoice](#a_7: languageChoice)</span> | <span id="m_8: languageChoice">[8: languageChoice](#a_8: languageChoice)</span> | <span id="m_9: hasUnitTests">[9: hasUnitTests](#a_9: hasUnitTests)</span> | <span id="m_10: hasUITests">[10: hasUITests](#a_10: hasUITests)</span> | <span id="m_11: languageChoice">[11: languageChoice](#a_11: languageChoice)</span> | <span id="m_12: languageChoice">[12: languageChoice](#a_12: languageChoice)</span> | <span id="m_13: coreData">[13: coreData](#a_13: coreData)</span> | <span id="m_14: languageChoice">[14: languageChoice](#a_14: languageChoice)</span>
+
+- 0 :  <span id="a_0: languageChoice"/>[↩](#m_0: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -526,7 +528,7 @@ This template provides a starting point for an application that uses a single vi
 
 				- `*:imports:importHeader:*` : ``
 
-- 1 : 
+- 1 :  <span id="a_1: languageChoice"/>[↩](#m_1: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -560,7 +562,7 @@ This template provides a starting point for an application that uses a single vi
 
 						- `SWIFT_VERSION` : `5.0`
 
-- 2 : 
+- 2 :  <span id="a_2: productName"/>[↩](#m_2: productName)
 
 	- Description : `Your new product's name`
 
@@ -578,7 +580,7 @@ This template provides a starting point for an application that uses a single vi
 
 	- Type : `text`
 
-- 3 : 
+- 3 :  <span id="a_3: organizationName"/>[↩](#m_3: organizationName)
 
 	- Default : `___FULLUSERNAME___`
 
@@ -590,7 +592,7 @@ This template provides a starting point for an application that uses a single vi
 
 	- Type : `text`
 
-- 4 : 
+- 4 :  <span id="a_4: bundleIdentifierPrefix"/>[↩](#m_4: bundleIdentifierPrefix)
 
 	- Description : `Your organization's bundle identifier prefix`
 
@@ -604,7 +606,7 @@ This template provides a starting point for an application that uses a single vi
 
 	- Type : `text`
 
-- 5 : 
+- 5 :  <span id="a_5: bundleIdentifier"/>[↩](#m_5: bundleIdentifier)
 
 	- Default : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___`
 
@@ -618,7 +620,7 @@ This template provides a starting point for an application that uses a single vi
 
 	- Type : `static`
 
-- 6 : 
+- 6 :  <span id="a_6: languageChoice"/>[↩](#m_6: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -638,7 +640,7 @@ This template provides a starting point for an application that uses a single vi
 
 					- End : ``
 
-- 7 : 
+- 7 :  <span id="a_7: languageChoice"/>[↩](#m_7: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -692,7 +694,7 @@ This template provides a starting point for an application that uses a single vi
 
 				- `*:imports:importCocoa` : `import UIKit`
 
-- 8 : 
+- 8 :  <span id="a_8: languageChoice"/>[↩](#m_8: languageChoice)
 
 	- Default : `Swift`
 
@@ -726,7 +728,7 @@ This template provides a starting point for an application that uses a single vi
 
 			- moduleNamePrefixForClasses : `$(PRODUCT_MODULE_NAME).`
 
-- 9 : 
+- 9 :  <span id="a_9: hasUnitTests"/>[↩](#m_9: hasUnitTests)
 
 	- Default : `true`
 
@@ -752,7 +754,7 @@ This template provides a starting point for an application that uses a single vi
 
 					- Name : `___PACKAGENAME___Tests`
 
-- 10 : 
+- 10 :  <span id="a_10: hasUITests"/>[↩](#m_10: hasUITests)
 
 	- Default : `true`
 
@@ -778,7 +780,7 @@ This template provides a starting point for an application that uses a single vi
 
 					- Name : `___PACKAGENAME___UITests`
 
-- 11 : 
+- 11 :  <span id="a_11: languageChoice"/>[↩](#m_11: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -980,7 +982,7 @@ This template provides a starting point for an application that uses a single vi
 
 				- 17 : `AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
 
-- 12 : 
+- 12 :  <span id="a_12: languageChoice"/>[↩](#m_12: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -998,7 +1000,7 @@ This template provides a starting point for an application that uses a single vi
 
 				- `*:implementation:methods:awakeFromNib:super` : `super.awakeFromNib()`
 
-- 13 : 
+- 13 :  <span id="a_13: coreData"/>[↩](#m_13: coreData)
 
 	- Default : `false`
 
@@ -1196,7 +1198,7 @@ This template provides a starting point for an application that uses a single vi
 
 					- languageChoice : `Swift`
 
-- 14 : 
+- 14 :  <span id="a_14: languageChoice"/>[↩](#m_14: languageChoice)
 
 	- Identifier : `languageChoice`
 
@@ -1236,11 +1238,11 @@ This template provides a starting point for an application that uses a single vi
 
 				- 4 : `ViewController.swift:implementation:methods:viewDidLoad:super`
 
-### Platforms :  <span id="f_Platforms"/>[↩](#a_Platforms)
+### Platforms :  <span id="a_Platforms"/>[↩](#m_Platforms)
 
 - 0 : `com.apple.platform.iphoneos`
 
-### Project :  <span id="f_Project"/>[↩](#a_Project)
+### Project :  <span id="a_Project"/>[↩](#m_Project)
 
 - Configurations : 
 
@@ -1360,7 +1362,7 @@ This template provides a starting point for an application that uses a single vi
 
 ### SortOrder : `YES`
 
-### Targets :  <span id="f_Targets"/>[↩](#a_Targets)
+### Targets :  <span id="a_Targets"/>[↩](#m_Targets)
 
 - 0 : 
 

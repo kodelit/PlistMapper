@@ -11,15 +11,15 @@
 - com.apple.dt.unit.iosBase_Definitions ( [**iOS Base_Definitions**](iOS%20Base_Definitions.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/iOS%20Base_Definitions.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Platforms">[Platforms](#f_Platforms)</span> | <span id="a_Project">[Project](#f_Project)</span> | <span id="a_Targets">[Targets](#f_Targets)</span>
+<span id="m_Platforms">[Platforms](#a_Platforms)</span> | <span id="m_Project">[Project](#a_Project)</span> | <span id="m_Targets">[Targets](#a_Targets)</span>
 
 ### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-### Platforms :  <span id="f_Platforms"/>[↩](#a_Platforms)
+### Platforms :  <span id="a_Platforms"/>[↩](#m_Platforms)
 
 - 0 : `com.apple.platform.iphoneos`
 
-### Project :  <span id="f_Project"/>[↩](#a_Project)
+### Project :  <span id="a_Project"/>[↩](#m_Project)
 
 - Configurations : 
 
@@ -35,7 +35,7 @@
 
 	- `IPHONEOS_DEPLOYMENT_TARGET` : `latest_iphoneos`
 
-### Targets :  <span id="f_Targets"/>[↩](#a_Targets)
+### Targets :  <span id="a_Targets"/>[↩](#m_Targets)
 
 - 0 : 
 

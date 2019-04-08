@@ -27,7 +27,7 @@ class GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
         }
 
         let output = MarkdownOutput()
-        let generator = XcodeTemplateCombinedInfoMarkdownGenerator()
+        let generator = XcodeTemplateInfoMarkdownGenerator()
         for (_, info) in templateInfos {
             guard let fileName = info.outputFileName() else {
                 continue
@@ -41,8 +41,9 @@ class GenerateXcodeTempateDescriptionTask: XcodeTempateInfoTask {
             var info = self.templateInfo(for: selectedTemplate!, availableTemplatesById: templateInfos),
             let fileName = info.outputFileName()
         {
+            let shouldMergeOptions = !Input.shouldSkipMergingOptions
             info.loadAncestorsTree(with: templateInfos)
-            info.plist = info.composedPlist()
+            info.plist = info.composedPlist(mergeIdentifiedOptions: shouldMergeOptions)
 
             let generator = XcodeTemplateCombinedInfoMarkdownGenerator()
             let content = generator.fileContent(for: info, availableAncestorsById: templateInfos)

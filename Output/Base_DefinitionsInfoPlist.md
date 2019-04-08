@@ -7,9 +7,9 @@
 - com.apple.dt.unit.base_DefinitionsInfoPlist ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsInfoPlist.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Base_DefinitionsInfoPlist.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Definitions">[Definitions](#f_Definitions)</span>
+<span id="m_Definitions">[Definitions](#a_Definitions)</span>
 
-### Definitions :  <span id="f_Definitions"/>[↩](#a_Definitions)
+### Definitions :  <span id="a_Definitions"/>[↩](#m_Definitions)
 
 - `Info.plist` : 
 

@@ -7,11 +7,11 @@
 - com.apple.dt.unit.languageChoice ( [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Options">[Options](#f_Options)</span>
+<span id="m_Options">[Options](#a_Options)</span>
 
 ### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-### Options :  <span id="f_Options"/>[↩](#a_Options)
+### Options :  <span id="a_Options"/>[↩](#m_Options)
 
 - 0 : 
 

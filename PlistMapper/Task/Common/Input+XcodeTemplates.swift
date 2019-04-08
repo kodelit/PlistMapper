@@ -9,18 +9,22 @@
 import Foundation
 
 extension Input.Arg {
-    static var xcodeAllTemplates:String { return "--xcode-all-proj-templates" }
     static var xcodeSelectedTemplate:String { return "--xcode-proj-template" }
     static var xcodeTemplateInheritanceMap:String { return "--xcode-proj-template-inheritance-map" }
+    static var skipMergingOptions:String { return "--skip-merging-combined-options" }
 }
 
 extension Input {
     static var shouldMapAllXcodeTemplates:Bool {
-        return Input.boolForArg(Input.Arg.xcodeAllTemplates)
+        return self.selectedTemplate == nil
     }
 
     /// Selected template id or name form command line param
     static var selectedTemplate:String? {
-        return self.shouldMapAllXcodeTemplates ? nil : Input.valueForArg(Input.Arg.xcodeSelectedTemplate)
+        return Input.valueForArg(Input.Arg.xcodeSelectedTemplate)
+    }
+
+    static var shouldSkipMergingOptions:Bool {
+        return Input.boolForArg(Input.Arg.skipMergingOptions)
     }
 }

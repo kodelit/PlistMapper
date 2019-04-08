@@ -13,11 +13,11 @@
 - com.apple.dt.unit.coreDataCocoaTouchApplication ( [**Core Data Cocoa Touch App**](Core%20Data%20Cocoa%20Touch%20App.md), [directory](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Templates/Project%20Templates/iOS/Application/Core%20Data%20Cocoa%20Touch%20App.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Definitions">[Definitions](#f_Definitions)</span> | <span id="a_Options">[Options](#f_Options)</span>
+<span id="m_Definitions">[Definitions](#a_Definitions)</span> | <span id="m_Options">[Options](#a_Options)</span>
 
 ### Concrete : `YES`
 
-### Definitions :  <span id="f_Definitions"/>[↩](#a_Definitions)
+### Definitions :  <span id="a_Definitions"/>[↩](#m_Definitions)
 
 - `Base.lproj/Main.storyboard` : 
 
@@ -33,7 +33,7 @@ This template provides a starting point for an application that uses a single vi
 
 ### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-### Options :  <span id="f_Options"/>[↩](#a_Options)
+### Options :  <span id="a_Options"/>[↩](#m_Options)
 
 - 0 : 
 

@@ -15,9 +15,9 @@
 - com.apple.dt.unit.languageChoice ( [**Language Choice**](Language%20Choice.md), [directory](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate), [plist](/Applications/Xcode.app/Contents/Developer/Library/Xcode/Templates/Project%20Templates/Base/Language%20Choice.xctemplate/TemplateInfo.plist) )
 
 ---
-<span id="a_Definitions">[Definitions](#f_Definitions)</span> | <span id="a_Nodes">[Nodes](#f_Nodes)</span> | <span id="a_Options">[Options](#f_Options)</span> | <span id="a_Targets">[Targets](#f_Targets)</span>
+<span id="m_Definitions">[Definitions](#a_Definitions)</span> | <span id="m_Nodes">[Nodes](#a_Nodes)</span> | <span id="m_Options">[Options](#a_Options)</span> | <span id="m_Targets">[Targets](#a_Targets)</span>
 
-### Definitions :  <span id="f_Definitions"/>[↩](#a_Definitions)
+### Definitions :  <span id="a_Definitions"/>[↩](#m_Definitions)
 
 - `*:implementation:methods:applicationDidBecomeActive:comments` : 
 
@@ -126,7 +126,7 @@
 
 ### Kind : `Xcode.Xcode3.ProjectTemplateUnitKind`
 
-### Nodes :  <span id="f_Nodes"/>[↩](#a_Nodes)
+### Nodes :  <span id="a_Nodes"/>[↩](#m_Nodes)
 
 - 0 : `Info.plist:iPhone`
 
@@ -142,7 +142,7 @@
 
 - 6 : `Base.lproj/LaunchScreen.storyboard`
 
-### Options :  <span id="f_Options"/>[↩](#a_Options)
+### Options :  <span id="a_Options"/>[↩](#m_Options)
 
 - 0 : 
 
@@ -398,7 +398,7 @@
 
 				- 17 : `AppDelegate.swift:implementation:methods:applicationWillTerminate:comments`
 
-### Targets :  <span id="f_Targets"/>[↩](#a_Targets)
+### Targets :  <span id="a_Targets"/>[↩](#m_Targets)
 
 - 0 : 
 

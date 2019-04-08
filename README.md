@@ -43,11 +43,11 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 ### Arguments
 - `--output <dir>`
 	
-	allows to provide custom output dir, default is the script directory
+	Allows to provide custom output dir, default is the script directory
 
 - `--xcode-proj-template <template_identifier>|<template name>`
 
-	makes the tool generate markdown files describing:
+	Makes the tool generate markdown files describing:
 	
 	- template defined using its identifier (TemplateInfo.plist:Identifier) or its name
 	- all ancestors of the template
@@ -62,6 +62,18 @@ CommandLine tool to map plist files to other formats allowing better analysis an
 	**If this argument is not defined there will be descriptions generated for every known template, but without mind maps.**
 	
 	Check argumetnts of scheme `XcodeTemplateAncestorsMapping` for example
+	
+- `--skip-merging-combined-options`
+
+	Allows to skip merging options in combined describtion (*Template Name Combined.md*). 
+	
+	By default (without the argument):
+	- Options are merged with other options with the same value for key `Identifier`.
+	- Options without `Identifier` key are merged all together.
+	
+	Merged options are more readable.
+	
+	Merging however can be skipped which cause that all definitons from deferent templates (like ancestors) are added separately to the options list and ordered in order of inheritance, so there can be more then one option with the same id but deferent settings. This however allows to make sure that merging did not destroy anything but by cost of readability.
 
 ---
 
