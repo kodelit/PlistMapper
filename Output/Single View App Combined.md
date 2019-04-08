@@ -467,9 +467,9 @@ This template provides a starting point for an application that uses a single vi
 
 ### Options :  <span id="a_Options"/>[↩](#m_Options)
 
-By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleIdentifier)</span> | <span id="m_1:bundleIdentifierPrefix">[1:bundleIdentifierPrefix](#a_1:bundleIdentifierPrefix)</span> | <span id="m_2:coreData">[2:coreData](#a_2:coreData)</span> | <span id="m_3:hasUITests">[3:hasUITests](#a_3:hasUITests)</span> | <span id="m_4:hasUnitTests">[4:hasUnitTests](#a_4:hasUnitTests)</span> | <span id="m_5:languageChoice">[5:languageChoice](#a_5:languageChoice)</span> | <span id="m_6:organizationName">[6:organizationName](#a_6:organizationName)</span> | <span id="m_7:productName">[7:productName](#a_7:productName)</span>
+By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0%3AbundleIdentifier)</span> | <span id="m_1:bundleIdentifierPrefix">[1:bundleIdentifierPrefix](#a_1%3AbundleIdentifierPrefix)</span> | <span id="m_2:coreData">[2:coreData](#a_2%3AcoreData)</span> | <span id="m_3:hasUITests">[3:hasUITests](#a_3%3AhasUITests)</span> | <span id="m_4:hasUnitTests">[4:hasUnitTests](#a_4%3AhasUnitTests)</span> | <span id="m_5:languageChoice">[5:languageChoice](#a_5%3AlanguageChoice)</span> | <span id="m_6:organizationName">[6:organizationName](#a_6%3AorganizationName)</span> | <span id="m_7:productName">[7:productName](#a_7%3AproductName)</span>
 
-- 0 :  <span id="a_0:bundleIdentifier"/>[↩](#m_0:bundleIdentifier)
+- 0 :  <span id="a_0:bundleIdentifier"/>[↩](#m_0%3AbundleIdentifier)
 
 	- Default : `___VARIABLE_bundleIdentifierPrefix:bundleIdentifier___.___VARIABLE_productName:RFC1034Identifier___`
 
@@ -483,7 +483,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 	- Type : `static`
 
-- 1 :  <span id="a_1:bundleIdentifierPrefix"/>[↩](#m_1:bundleIdentifierPrefix)
+- 1 :  <span id="a_1:bundleIdentifierPrefix"/>[↩](#m_1%3AbundleIdentifierPrefix)
 
 	- Description : `Your organization's bundle identifier prefix`
 
@@ -497,7 +497,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 	- Type : `text`
 
-- 2 :  <span id="a_2:coreData"/>[↩](#m_2:coreData)
+- 2 :  <span id="a_2:coreData"/>[↩](#m_2%3AcoreData)
 
 	- Default : `false`
 
@@ -695,7 +695,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 					- languageChoice : `Swift`
 
-- 3 :  <span id="a_3:hasUITests"/>[↩](#m_3:hasUITests)
+- 3 :  <span id="a_3:hasUITests"/>[↩](#m_3%3AhasUITests)
 
 	- Default : `true`
 
@@ -721,7 +721,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 					- Name : `___PACKAGENAME___UITests`
 
-- 4 :  <span id="a_4:hasUnitTests"/>[↩](#m_4:hasUnitTests)
+- 4 :  <span id="a_4:hasUnitTests"/>[↩](#m_4%3AhasUnitTests)
 
 	- Default : `true`
 
@@ -747,7 +747,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 					- Name : `___PACKAGENAME___Tests`
 
-- 5 :  <span id="a_5:languageChoice"/>[↩](#m_5:languageChoice)
+- 5 :  <span id="a_5:languageChoice"/>[↩](#m_5%3AlanguageChoice)
 
 	- Default : `Swift`
 
@@ -1130,7 +1130,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 			- moduleNamePrefixForClasses : `$(PRODUCT_MODULE_NAME).`
 
-- 6 :  <span id="a_6:organizationName"/>[↩](#m_6:organizationName)
+- 6 :  <span id="a_6:organizationName"/>[↩](#m_6%3AorganizationName)
 
 	- Default : `___FULLUSERNAME___`
 
@@ -1142,7 +1142,7 @@ By identifier: <span id="m_0:bundleIdentifier">[0:bundleIdentifier](#a_0:bundleI
 
 	- Type : `text`
 
-- 7 :  <span id="a_7:productName"/>[↩](#m_7:productName)
+- 7 :  <span id="a_7:productName"/>[↩](#m_7%3AproductName)
 
 	- Description : `Your new product's name`
 

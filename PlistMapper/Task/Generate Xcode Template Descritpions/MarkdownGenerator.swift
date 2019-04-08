@@ -264,7 +264,7 @@ extension MarkdownGenerator {
 
     func fileMenu(with keys:[String]) -> String {
         let links = keys.map { (key) -> String in
-            return "<span id=\"m_\(key)\">[\(key)](#a_\(key))</span>"
+            return "<span id=\"m_\(key)\">[\(key)](#a_\(key.escapedPath()))</span>"
         }
         let linksRow = links.joined(separator: " | ")
         return linksRow

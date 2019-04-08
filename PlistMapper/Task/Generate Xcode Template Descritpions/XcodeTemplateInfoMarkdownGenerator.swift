@@ -41,7 +41,7 @@ struct XcodeTemplateCombinedInfoMarkdownGenerator: MarkdownGenerator {
             for (index, value) in array.enumerated() {
                 var keyRow = self.rowForKey("\(index)", indentationLevel: level)
                 if menuAllowed, let identifier = self.identifier(of: value, at: index) {
-                    keyRow = "\(keyRow) <span id=\"a_\(identifier)\"/>[↩](#m_\(identifier))"
+                    keyRow = "\(keyRow) <span id=\"a_\(identifier)\"/>[↩](#m_\(identifier.escapedPath()))"
                 }
                 rows.append(keyRow)
 
